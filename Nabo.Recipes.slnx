@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/Nabo.Recipes.csproj" />
+  <Project Path="tests/Nabo.Recipes.Checks.csproj" />
+</Solution>

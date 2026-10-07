@@ -1,0 +1,23 @@
+name: Checks
+on: [push, pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: test
+          POSTGRES_DB: recipes_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - run: dotnet build src/Nabo.Recipes.csproj -c Release
+      - run: dotnet run --project tests/Nabo.Recipes.Checks.csproj
+        env:
+          TEST_DATABASE_URL: Host=localhost;Port=5432;Database=recipes_test;Username=postgres;Password=test

@@ -1,0 +1,7168 @@
+{
+  "version": 2,
+  "ingredients": [
+    {
+      "id": "potato",
+      "name": "Картофель",
+      "productCategoryId": "vegetables",
+      "aliases": [
+        "картофель",
+        "картошка"
+      ],
+      "searchTerms": [
+        "Картофель"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "carrot",
+      "name": "Морковь",
+      "productCategoryId": "vegetables",
+      "aliases": [
+        "морковь"
+      ],
+      "searchTerms": [
+        "Морковь"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "beet",
+      "name": "Свёкла",
+      "productCategoryId": "vegetables",
+      "aliases": [
+        "свекла"
+      ],
+      "searchTerms": [
+        "Свёкла"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "onion",
+      "name": "Лук репчатый",
+      "productCategoryId": "vegetables",
+      "aliases": [
+        "лук",
+        "репчатый лук",
+        "лук репчатый"
+      ],
+      "searchTerms": [
+        "Лук репчатый"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "garlic",
+      "name": "Чеснок",
+      "productCategoryId": "vegetables",
+      "aliases": [
+        "чеснок"
+      ],
+      "searchTerms": [
+        "Чеснок"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "tomato",
+      "name": "Помидоры",
+      "productCategoryId": "vegetables",
+      "aliases": [
+        "помидоры",
+        "томаты"
+      ],
+      "searchTerms": [
+        "Помидоры"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "cucumber",
+      "name": "Огурцы",
+      "productCategoryId": "vegetables",
+      "aliases": [
+        "огурец",
+        "огурцы"
+      ],
+      "searchTerms": [
+        "Огурцы"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "cabbage",
+      "name": "Капуста белокочанная",
+      "productCategoryId": "vegetables",
+      "aliases": [
+        "капуста",
+        "белокочанная капуста"
+      ],
+      "searchTerms": [
+        "Капуста белокочанная"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "beef",
+      "name": "Говядина",
+      "productCategoryId": "meat",
+      "aliases": [
+        "говядина",
+        "говядина на кости"
+      ],
+      "searchTerms": [
+        "Говядина"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "pork",
+      "name": "Свинина",
+      "productCategoryId": "meat",
+      "aliases": [
+        "свинина"
+      ],
+      "searchTerms": [
+        "Свинина"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "pork-mince",
+      "name": "Свиной фарш",
+      "productCategoryId": "meat",
+      "aliases": [
+        "свиной фарш"
+      ],
+      "searchTerms": [
+        "Свиной фарш"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "beef-mince",
+      "name": "Говяжий фарш",
+      "productCategoryId": "meat",
+      "aliases": [
+        "говяжий фарш"
+      ],
+      "searchTerms": [
+        "Говяжий фарш"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "milk",
+      "name": "Молоко",
+      "productCategoryId": "dairy",
+      "aliases": [
+        "молоко",
+        "молоко теплое",
+        "теплое молоко"
+      ],
+      "searchTerms": [
+        "Молоко"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "egg",
+      "name": "Яйца",
+      "productCategoryId": "eggs",
+      "aliases": [
+        "яйцо",
+        "яйца",
+        "яйцо целиком"
+      ],
+      "searchTerms": [
+        "Яйца"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "curd",
+      "name": "Творог",
+      "productCategoryId": "dairy",
+      "aliases": [
+        "творог",
+        "творог 5 9",
+        "творог 5"
+      ],
+      "searchTerms": [
+        "Творог"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "sour-cream",
+      "name": "Сметана",
+      "productCategoryId": "dairy",
+      "aliases": [
+        "сметана"
+      ],
+      "searchTerms": [
+        "Сметана"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "cream",
+      "name": "Сливки",
+      "productCategoryId": "dairy",
+      "aliases": [
+        "сливки",
+        "сливки 30",
+        "сливки 33"
+      ],
+      "searchTerms": [
+        "Сливки"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "butter",
+      "name": "Сливочное масло",
+      "productCategoryId": "dairy",
+      "aliases": [
+        "сливочное масло",
+        "масло сливочное"
+      ],
+      "searchTerms": [
+        "Сливочное масло"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "parmesan",
+      "name": "Пармезан",
+      "productCategoryId": "dairy",
+      "aliases": [
+        "пармезан"
+      ],
+      "searchTerms": [
+        "Пармезан"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "spaghetti",
+      "name": "Спагетти",
+      "productCategoryId": "pasta",
+      "aliases": [
+        "спагетти"
+      ],
+      "searchTerms": [
+        "Спагетти"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "flour",
+      "name": "Мука",
+      "productCategoryId": "baking",
+      "aliases": [
+        "мука",
+        "пшеничная мука"
+      ],
+      "searchTerms": [
+        "Мука"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "sugar",
+      "name": "Сахар",
+      "productCategoryId": "baking",
+      "aliases": [
+        "сахар"
+      ],
+      "searchTerms": [
+        "Сахар"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "oil",
+      "name": "Масло растительное",
+      "productCategoryId": "oils",
+      "aliases": [
+        "растительное масло",
+        "масло для жарки",
+        "масло для фритюра"
+      ],
+      "searchTerms": [
+        "Масло растительное"
+      ],
+      "pantry": true,
+      "common": true
+    },
+    {
+      "id": "olive-oil",
+      "name": "Масло оливковое",
+      "productCategoryId": "oils",
+      "aliases": [
+        "оливковое масло"
+      ],
+      "searchTerms": [
+        "Масло оливковое"
+      ],
+      "pantry": true,
+      "common": true
+    },
+    {
+      "id": "salt",
+      "name": "Соль",
+      "productCategoryId": "spices",
+      "aliases": [
+        "соль",
+        "соль для воды"
+      ],
+      "searchTerms": [
+        "Соль"
+      ],
+      "pantry": true,
+      "common": true
+    },
+    {
+      "id": "pepper",
+      "name": "Перец черный",
+      "productCategoryId": "spices",
+      "aliases": [
+        "черный перец",
+        "перец черный",
+        "молотый черный перец"
+      ],
+      "searchTerms": [
+        "Перец черный"
+      ],
+      "pantry": true,
+      "common": true
+    },
+    {
+      "id": "water",
+      "name": "Вода",
+      "productCategoryId": "pantry",
+      "aliases": [
+        "вода",
+        "вода теплая",
+        "кипяток"
+      ],
+      "searchTerms": [
+        "Вода"
+      ],
+      "pantry": true,
+      "common": true
+    },
+    {
+      "id": "bay",
+      "name": "Лавровый лист",
+      "productCategoryId": "spices",
+      "aliases": [
+        "лавровый лист"
+      ],
+      "searchTerms": [
+        "Лавровый лист"
+      ],
+      "pantry": true,
+      "common": true
+    },
+    {
+      "id": "vinegar",
+      "name": "Уксус",
+      "productCategoryId": "spices",
+      "aliases": [
+        "уксус",
+        "уксус 9"
+      ],
+      "searchTerms": [
+        "Уксус"
+      ],
+      "pantry": true,
+      "common": true
+    },
+    {
+      "id": "tomato-paste",
+      "name": "Томатная паста",
+      "productCategoryId": "preserves",
+      "aliases": [
+        "томатная паста"
+      ],
+      "searchTerms": [
+        "Томатная паста"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "bread",
+      "name": "Хлеб",
+      "productCategoryId": "bread",
+      "aliases": [
+        "хлеб",
+        "белый хлеб"
+      ],
+      "searchTerms": [
+        "Хлеб"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "lemon",
+      "name": "Лимон",
+      "productCategoryId": "fruit",
+      "aliases": [
+        "лимон"
+      ],
+      "searchTerms": [
+        "Лимон"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "mushroom",
+      "name": "Шампиньоны",
+      "productCategoryId": "vegetables",
+      "aliases": [
+        "шампиньоны"
+      ],
+      "searchTerms": [
+        "Шампиньоны"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "oats",
+      "name": "Овсяные хлопья",
+      "productCategoryId": "grains",
+      "aliases": [
+        "овсяные хлопья",
+        "овсянка"
+      ],
+      "searchTerms": [
+        "Овсяные хлопья"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "dill",
+      "name": "Укроп",
+      "productCategoryId": "herbs",
+      "aliases": [
+        "укроп"
+      ],
+      "searchTerms": [
+        "Укроп"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "parsley",
+      "name": "Петрушка",
+      "productCategoryId": "herbs",
+      "aliases": [
+        "петрушка"
+      ],
+      "searchTerms": [
+        "Петрушка"
+      ],
+      "pantry": false,
+      "common": true
+    },
+    {
+      "id": "ingredient-owx9fb",
+      "name": "Гуанчале",
+      "aliases": [
+        "Гуанчале"
+      ],
+      "searchTerms": [
+        "Гуанчале"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-l00838",
+      "name": "Яичные желтки",
+      "aliases": [
+        "Яичные желтки"
+      ],
+      "searchTerms": [
+        "Яичные желтки"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1pz26p7",
+      "name": "Пекорино романо",
+      "aliases": [
+        "Пекорино романо"
+      ],
+      "searchTerms": [
+        "Пекорино романо"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-cizrh6",
+      "name": "Рис карнароли",
+      "aliases": [
+        "Рис карнароли"
+      ],
+      "searchTerms": [
+        "Рис карнароли"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1d3u8vn",
+      "name": "Бульон",
+      "aliases": [
+        "Бульон"
+      ],
+      "searchTerms": [
+        "Бульон"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-egfvck",
+      "name": "Сухое белое вино",
+      "aliases": [
+        "Сухое белое вино"
+      ],
+      "searchTerms": [
+        "Сухое белое вино"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-5zmb9u",
+      "name": "Шафран",
+      "aliases": [
+        "Шафран"
+      ],
+      "searchTerms": [
+        "Шафран"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1aqig2m",
+      "name": "Баклажан",
+      "aliases": [
+        "Баклажан"
+      ],
+      "searchTerms": [
+        "Баклажан"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-hlvtdz",
+      "name": "Кабачок",
+      "aliases": [
+        "Кабачок"
+      ],
+      "searchTerms": [
+        "Кабачок"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1kiow4p",
+      "name": "Сладкий перец",
+      "aliases": [
+        "Сладкий перец"
+      ],
+      "searchTerms": [
+        "Сладкий перец"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-12z9jqn",
+      "name": "Тимьян",
+      "aliases": [
+        "Тимьян"
+      ],
+      "searchTerms": [
+        "Тимьян"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1or31pa",
+      "name": "Базилик",
+      "aliases": [
+        "Базилик"
+      ],
+      "searchTerms": [
+        "Базилик"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-r9kpbu",
+      "name": "Говяжий бульон",
+      "aliases": [
+        "Говяжий бульон"
+      ],
+      "searchTerms": [
+        "Говяжий бульон"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-8fjdxi",
+      "name": "Багет",
+      "aliases": [
+        "Багет"
+      ],
+      "searchTerms": [
+        "Багет"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-bdce6u",
+      "name": "Грюйер",
+      "aliases": [
+        "Грюйер"
+      ],
+      "searchTerms": [
+        "Грюйер"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1k51akh",
+      "name": "Спелые помидоры",
+      "aliases": [
+        "Спелые помидоры"
+      ],
+      "searchTerms": [
+        "Спелые помидоры"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-109xmlr",
+      "name": "Красный лук",
+      "aliases": [
+        "Красный лук"
+      ],
+      "searchTerms": [
+        "Красный лук"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1ciodg7",
+      "name": "Зелёный перец",
+      "aliases": [
+        "Зелёный перец"
+      ],
+      "searchTerms": [
+        "Зелёный перец"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-u3fiww",
+      "name": "Фета",
+      "aliases": [
+        "Фета"
+      ],
+      "searchTerms": [
+        "Фета"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1qodowh",
+      "name": "Оливки каламата",
+      "aliases": [
+        "Оливки каламата"
+      ],
+      "searchTerms": [
+        "Оливки каламата"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-waoh74",
+      "name": "Сушёный орегано",
+      "aliases": [
+        "Сушёный орегано"
+      ],
+      "searchTerms": [
+        "Сушёный орегано"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1uxrpos",
+      "name": "Ванильный сахар",
+      "aliases": [
+        "Ванильный сахар"
+      ],
+      "searchTerms": [
+        "Ванильный сахар"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1us4nb8",
+      "name": "Варенье",
+      "aliases": [
+        "Варенье"
+      ],
+      "searchTerms": [
+        "Варенье"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-14vlalt",
+      "name": "Маскарпоне",
+      "aliases": [
+        "Маскарпоне"
+      ],
+      "searchTerms": [
+        "Маскарпоне"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-14delxz",
+      "name": "Желтки",
+      "aliases": [
+        "Желтки"
+      ],
+      "searchTerms": [
+        "Желтки"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-175y40i",
+      "name": "Белки",
+      "aliases": [
+        "Белки"
+      ],
+      "searchTerms": [
+        "Белки"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-yree7r",
+      "name": "Савоярди",
+      "aliases": [
+        "Савоярди"
+      ],
+      "searchTerms": [
+        "Савоярди"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-144r1cw",
+      "name": "Крепкий эспрессо",
+      "aliases": [
+        "Крепкий эспрессо"
+      ],
+      "searchTerms": [
+        "Крепкий эспрессо"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1aweo1d",
+      "name": "Марсала",
+      "aliases": [
+        "Марсала"
+      ],
+      "searchTerms": [
+        "Марсала"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-caolt0",
+      "name": "Какао-порошок",
+      "aliases": [
+        "Какао-порошок"
+      ],
+      "searchTerms": [
+        "Какао-порошок"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1gqlipd",
+      "name": "Чёрствый белый хлеб",
+      "aliases": [
+        "Чёрствый белый хлеб"
+      ],
+      "searchTerms": [
+        "Чёрствый белый хлеб"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-13x9ew8",
+      "name": "Оливковое масло экстра вирджин",
+      "aliases": [
+        "Оливковое масло экстра вирджин"
+      ],
+      "searchTerms": [
+        "Оливковое масло экстра вирджин"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1tg696q",
+      "name": "Хересный уксус",
+      "aliases": [
+        "Хересный уксус"
+      ],
+      "searchTerms": [
+        "Хересный уксус"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1mhq1lk",
+      "name": "Сахар в крем",
+      "aliases": [
+        "Сахар в крем"
+      ],
+      "searchTerms": [
+        "Сахар в крем"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-q1p8f0",
+      "name": "Стручок ванили",
+      "aliases": [
+        "Стручок ванили"
+      ],
+      "searchTerms": [
+        "Стручок ванили"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-n9hpu8",
+      "name": "Сахар для корочки",
+      "aliases": [
+        "Сахар для корочки"
+      ],
+      "searchTerms": [
+        "Сахар для корочки"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-f9vm9i",
+      "name": "Сухой творог",
+      "aliases": [
+        "Сухой творог"
+      ],
+      "searchTerms": [
+        "Сухой творог"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-2dpfhh",
+      "name": "Восковой картофель",
+      "aliases": [
+        "Восковой картофель"
+      ],
+      "searchTerms": [
+        "Восковой картофель"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-akd4g2",
+      "name": "Горячий овощной бульон",
+      "aliases": [
+        "Горячий овощной бульон"
+      ],
+      "searchTerms": [
+        "Горячий овощной бульон"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-ex39ml",
+      "name": "Винный уксус",
+      "aliases": [
+        "Винный уксус"
+      ],
+      "searchTerms": [
+        "Винный уксус"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-sxmbyt",
+      "name": "Горчица",
+      "aliases": [
+        "Горчица"
+      ],
+      "searchTerms": [
+        "Горчица"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-9kc5ns",
+      "name": "Зелёный лук",
+      "aliases": [
+        "Зелёный лук"
+      ],
+      "searchTerms": [
+        "Зелёный лук"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-yusna0",
+      "name": "Букатини",
+      "aliases": [
+        "Букатини"
+      ],
+      "searchTerms": [
+        "Букатини"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1m0s7om",
+      "name": "Помидоры сан-марцано",
+      "aliases": [
+        "Помидоры сан-марцано"
+      ],
+      "searchTerms": [
+        "Помидоры сан-марцано"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-bwiwtw",
+      "name": "Сушёный перчик чили",
+      "aliases": [
+        "Сушёный перчик чили"
+      ],
+      "searchTerms": [
+        "Сушёный перчик чили"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-kk33no",
+      "name": "Белое сухое вино",
+      "aliases": [
+        "Белое сухое вино"
+      ],
+      "searchTerms": [
+        "Белое сухое вино"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-116f0d1",
+      "name": "Филе трески",
+      "aliases": [
+        "Филе трески"
+      ],
+      "searchTerms": [
+        "Филе трески"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-og1qle",
+      "name": "Кукурузный крахмал",
+      "aliases": [
+        "Кукурузный крахмал"
+      ],
+      "searchTerms": [
+        "Кукурузный крахмал"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1rhtvha",
+      "name": "Светлое пиво",
+      "aliases": [
+        "Светлое пиво"
+      ],
+      "searchTerms": [
+        "Светлое пиво"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-11oo7iz",
+      "name": "Разрыхлитель",
+      "aliases": [
+        "Разрыхлитель"
+      ],
+      "searchTerms": [
+        "Разрыхлитель"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-kqkb9",
+      "name": "Солодовый уксус",
+      "aliases": [
+        "Солодовый уксус"
+      ],
+      "searchTerms": [
+        "Солодовый уксус"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-mgkxlm",
+      "name": "Фарш из баранины",
+      "aliases": [
+        "Фарш из баранины"
+      ],
+      "searchTerms": [
+        "Фарш из баранины"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-11bgk4e",
+      "name": "Зелёный горошек",
+      "aliases": [
+        "Зелёный горошек"
+      ],
+      "searchTerms": [
+        "Зелёный горошек"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1ydej5n",
+      "name": "Вустерский соус",
+      "aliases": [
+        "Вустерский соус"
+      ],
+      "searchTerms": [
+        "Вустерский соус"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-x0acav",
+      "name": "Мясной бульон",
+      "aliases": [
+        "Мясной бульон"
+      ],
+      "searchTerms": [
+        "Мясной бульон"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-15mjyg0",
+      "name": "Мука высокобелковая",
+      "aliases": [
+        "Мука высокобелковая"
+      ],
+      "searchTerms": [
+        "Мука высокобелковая"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-wdk0mh",
+      "name": "Тёплая вода",
+      "aliases": [
+        "Тёплая вода"
+      ],
+      "searchTerms": [
+        "Тёплая вода"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1llt42e",
+      "name": "Кислые яблоки",
+      "aliases": [
+        "Кислые яблоки"
+      ],
+      "searchTerms": [
+        "Кислые яблоки"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-dzmv4n",
+      "name": "Корица",
+      "aliases": [
+        "Корица"
+      ],
+      "searchTerms": [
+        "Корица"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-b03vci",
+      "name": "Изюм",
+      "aliases": [
+        "Изюм"
+      ],
+      "searchTerms": [
+        "Изюм"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1xl7hf6",
+      "name": "Панировочные сухари",
+      "aliases": [
+        "Панировочные сухари"
+      ],
+      "searchTerms": [
+        "Панировочные сухари"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-17byb0c",
+      "name": "Кефир",
+      "aliases": [
+        "Кефир"
+      ],
+      "searchTerms": [
+        "Кефир"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-q2ndya",
+      "name": "Сода",
+      "aliases": [
+        "Сода"
+      ],
+      "searchTerms": [
+        "Сода"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-hj1uoh",
+      "name": "Вишня без косточек",
+      "aliases": [
+        "Вишня без косточек"
+      ],
+      "searchTerms": [
+        "Вишня без косточек"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-klxdh",
+      "name": "Крахмал",
+      "aliases": [
+        "Крахмал"
+      ],
+      "searchTerms": [
+        "Крахмал"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-165v6ob",
+      "name": "Душистый перец молотый",
+      "aliases": [
+        "Душистый перец молотый"
+      ],
+      "searchTerms": [
+        "Душистый перец молотый"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1ujd4is",
+      "name": "Соевый соус",
+      "aliases": [
+        "Соевый соус"
+      ],
+      "searchTerms": [
+        "Соевый соус"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1dtvz2r",
+      "name": "Брусничное варенье",
+      "aliases": [
+        "Брусничное варенье"
+      ],
+      "searchTerms": [
+        "Брусничное варенье"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1hsshmx",
+      "name": "Мука типа 00",
+      "aliases": [
+        "Мука типа 00"
+      ],
+      "searchTerms": [
+        "Мука типа 00"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1djt11c",
+      "name": "Свежие дрожжи",
+      "aliases": [
+        "Свежие дрожжи"
+      ],
+      "searchTerms": [
+        "Свежие дрожжи"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-19vqqf7",
+      "name": "Соль в тесто",
+      "aliases": [
+        "Соль в тесто"
+      ],
+      "searchTerms": [
+        "Соль в тесто"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-cik7q0",
+      "name": "Моцарелла фиор ди латте",
+      "aliases": [
+        "Моцарелла фиор ди латте"
+      ],
+      "searchTerms": [
+        "Моцарелла фиор ди латте"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-yhfdyf",
+      "name": "Яйцо в тесто",
+      "aliases": [
+        "Яйцо в тесто"
+      ],
+      "searchTerms": [
+        "Яйцо в тесто"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-86nyki",
+      "name": "Ледяная вода",
+      "aliases": [
+        "Ледяная вода"
+      ],
+      "searchTerms": [
+        "Ледяная вода"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1aew0gt",
+      "name": "Копчёная грудинка",
+      "aliases": [
+        "Копчёная грудинка"
+      ],
+      "searchTerms": [
+        "Копчёная грудинка"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1lywraw",
+      "name": "Мускатный орех",
+      "aliases": [
+        "Мускатный орех"
+      ],
+      "searchTerms": [
+        "Мускатный орех"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-105zkyo",
+      "name": "Холодное молоко",
+      "aliases": [
+        "Холодное молоко"
+      ],
+      "searchTerms": [
+        "Холодное молоко"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1f9j1f3",
+      "name": "Масло в тесто",
+      "aliases": [
+        "Масло в тесто"
+      ],
+      "searchTerms": [
+        "Масло в тесто"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-msly1a",
+      "name": "Масло для слоения",
+      "aliases": [
+        "Масло для слоения"
+      ],
+      "searchTerms": [
+        "Масло для слоения"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-27ok9v",
+      "name": "Яйцо для смазки",
+      "aliases": [
+        "Яйцо для смазки"
+      ],
+      "searchTerms": [
+        "Яйцо для смазки"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-nu8ozc",
+      "name": "Телячий фарш",
+      "aliases": [
+        "Телячий фарш"
+      ],
+      "searchTerms": [
+        "Телячий фарш"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-4syu73",
+      "name": "Отварной картофель",
+      "aliases": [
+        "Отварной картофель"
+      ],
+      "searchTerms": [
+        "Отварной картофель"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1dy2hk7",
+      "name": "Красная капуста",
+      "aliases": [
+        "Красная капуста"
+      ],
+      "searchTerms": [
+        "Красная капуста"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-i88vy0",
+      "name": "Ржаная мука",
+      "aliases": [
+        "Ржаная мука"
+      ],
+      "searchTerms": [
+        "Ржаная мука"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1e8ekc1",
+      "name": "Круглый рис",
+      "aliases": [
+        "Круглый рис"
+      ],
+      "searchTerms": [
+        "Круглый рис"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1qzfp1t",
+      "name": "Цельнозерновая мука",
+      "aliases": [
+        "Цельнозерновая мука"
+      ],
+      "searchTerms": [
+        "Цельнозерновая мука"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1qtf28n",
+      "name": "Пахта",
+      "aliases": [
+        "Пахта"
+      ],
+      "searchTerms": [
+        "Пахта"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1n0mygw",
+      "name": "Картофель сырой",
+      "aliases": [
+        "Картофель сырой"
+      ],
+      "searchTerms": [
+        "Картофель сырой"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1vo2p0x",
+      "name": "Картофель варёный",
+      "aliases": [
+        "Картофель варёный"
+      ],
+      "searchTerms": [
+        "Картофель варёный"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-khqie0",
+      "name": "Копчёное сало",
+      "aliases": [
+        "Копчёное сало"
+      ],
+      "searchTerms": [
+        "Копчёное сало"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-x54sxq",
+      "name": "Картофельный крахмал",
+      "aliases": [
+        "Картофельный крахмал"
+      ],
+      "searchTerms": [
+        "Картофельный крахмал"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-25xjfh",
+      "name": "Майоран",
+      "aliases": [
+        "Майоран"
+      ],
+      "searchTerms": [
+        "Майоран"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-e2ikgs",
+      "name": "Свиная шея",
+      "aliases": [
+        "Свиная шея"
+      ],
+      "searchTerms": [
+        "Свиная шея"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-10ln10t",
+      "name": "Копчёная колбаса",
+      "aliases": [
+        "Копчёная колбаса"
+      ],
+      "searchTerms": [
+        "Копчёная колбаса"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-136t2d0",
+      "name": "Копчёные рёбрышки",
+      "aliases": [
+        "Копчёные рёбрышки"
+      ],
+      "searchTerms": [
+        "Копчёные рёбрышки"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1r5di83",
+      "name": "Мука для блинов",
+      "aliases": [
+        "Мука для блинов"
+      ],
+      "searchTerms": [
+        "Мука для блинов"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-15mp4mk",
+      "name": "Вода ледяная",
+      "aliases": [
+        "Вода ледяная"
+      ],
+      "searchTerms": [
+        "Вода ледяная"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-xehfl2",
+      "name": "Лёд колотый",
+      "aliases": [
+        "Лёд колотый"
+      ],
+      "searchTerms": [
+        "Лёд колотый"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-17xvc65",
+      "name": "Говяжья вырезка",
+      "aliases": [
+        "Говяжья вырезка"
+      ],
+      "searchTerms": [
+        "Говяжья вырезка"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1jfdv43",
+      "name": "Квашеная капуста",
+      "aliases": [
+        "Квашеная капуста"
+      ],
+      "searchTerms": [
+        "Квашеная капуста"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-15dp17v",
+      "name": "Капуста свежая",
+      "aliases": [
+        "Капуста свежая"
+      ],
+      "searchTerms": [
+        "Капуста свежая"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-16rm83i",
+      "name": "Свиная лопатка",
+      "aliases": [
+        "Свиная лопатка"
+      ],
+      "searchTerms": [
+        "Свиная лопатка"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-10xy21r",
+      "name": "Колбаса копчёная",
+      "aliases": [
+        "Колбаса копчёная"
+      ],
+      "searchTerms": [
+        "Колбаса копчёная"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1b4z7kv",
+      "name": "Сушёные белые грибы",
+      "aliases": [
+        "Сушёные белые грибы"
+      ],
+      "searchTerms": [
+        "Сушёные белые грибы"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-ozyl7e",
+      "name": "Чернослив",
+      "aliases": [
+        "Чернослив"
+      ],
+      "searchTerms": [
+        "Чернослив"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1nusx49",
+      "name": "Красное сухое вино",
+      "aliases": [
+        "Красное сухое вино"
+      ],
+      "searchTerms": [
+        "Красное сухое вино"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-qu31nd",
+      "name": "Можжевельник",
+      "aliases": [
+        "Можжевельник"
+      ],
+      "searchTerms": [
+        "Можжевельник"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1auqa48",
+      "name": "Душистый перец",
+      "aliases": [
+        "Душистый перец"
+      ],
+      "searchTerms": [
+        "Душистый перец"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-msoqx7",
+      "name": "Творог твёрдый",
+      "aliases": [
+        "Творог твёрдый"
+      ],
+      "searchTerms": [
+        "Творог твёрдый"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-18ti4st",
+      "name": "Ваниль",
+      "aliases": [
+        "Ваниль"
+      ],
+      "searchTerms": [
+        "Ваниль"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1chmk98",
+      "name": "Цедра лимона",
+      "aliases": [
+        "Цедра лимона"
+      ],
+      "searchTerms": [
+        "Цедра лимона"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-br7n06",
+      "name": "Лесные грибы",
+      "aliases": [
+        "Лесные грибы"
+      ],
+      "searchTerms": [
+        "Лесные грибы"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1kqbsng",
+      "name": "Тмин",
+      "aliases": [
+        "Тмин"
+      ],
+      "searchTerms": [
+        "Тмин"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1lw7bad",
+      "name": "Яблоки кислых сортов",
+      "aliases": [
+        "Яблоки кислых сортов"
+      ],
+      "searchTerms": [
+        "Яблоки кислых сортов"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-2cttrg",
+      "name": "Горох колотый",
+      "aliases": [
+        "Горох колотый"
+      ],
+      "searchTerms": [
+        "Горох колотый"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-xpyfgc",
+      "name": "Свиные рёбрышки",
+      "aliases": [
+        "Свиные рёбрышки"
+      ],
+      "searchTerms": [
+        "Свиные рёбрышки"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1vity45",
+      "name": "Свиная грудинка",
+      "aliases": [
+        "Свиная грудинка"
+      ],
+      "searchTerms": [
+        "Свиная грудинка"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1ce494j",
+      "name": "Копчёная колбаса рукворст",
+      "aliases": [
+        "Копчёная колбаса рукворст"
+      ],
+      "searchTerms": [
+        "Копчёная колбаса рукворст"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-ep7li1",
+      "name": "Корень сельдерея",
+      "aliases": [
+        "Корень сельдерея"
+      ],
+      "searchTerms": [
+        "Корень сельдерея"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1p1b252",
+      "name": "Лук-порей",
+      "aliases": [
+        "Лук-порей"
+      ],
+      "searchTerms": [
+        "Лук-порей"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-o9focu",
+      "name": "Листья сельдерея",
+      "aliases": [
+        "Листья сельдерея"
+      ],
+      "searchTerms": [
+        "Листья сельдерея"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-dv048d",
+      "name": "Ржаной хлеб",
+      "aliases": [
+        "Ржаной хлеб"
+      ],
+      "searchTerms": [
+        "Ржаной хлеб"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1yccmuv",
+      "name": "Сухие дрожжи",
+      "aliases": [
+        "Сухие дрожжи"
+      ],
+      "searchTerms": [
+        "Сухие дрожжи"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1qf6pyu",
+      "name": "Коричневый сахар",
+      "aliases": [
+        "Коричневый сахар"
+      ],
+      "searchTerms": [
+        "Коричневый сахар"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-dwu33r",
+      "name": "Жемчужный сахар",
+      "aliases": [
+        "Жемчужный сахар"
+      ],
+      "searchTerms": [
+        "Жемчужный сахар"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-ount79",
+      "name": "Сахарная пудра",
+      "aliases": [
+        "Сахарная пудра"
+      ],
+      "searchTerms": [
+        "Сахарная пудра"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-1n99csk",
+      "name": "Тёмный шоколад",
+      "aliases": [
+        "Тёмный шоколад"
+      ],
+      "searchTerms": [
+        "Тёмный шоколад"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-18d7ulz",
+      "name": "Кокосовое масло",
+      "aliases": [
+        "Кокосовое масло"
+      ],
+      "searchTerms": [
+        "Кокосовое масло"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-18uvwns",
+      "name": "Сушёные грибы",
+      "aliases": [
+        "Сушёные грибы"
+      ],
+      "searchTerms": [
+        "Сушёные грибы"
+      ],
+      "pantry": false,
+      "common": false
+    },
+    {
+      "id": "ingredient-rskcyy",
+      "name": "Щавель",
+      "aliases": [
+        "Щавель"
+      ],
+      "searchTerms": [
+        "Щавель"
+      ],
+      "pantry": false,
+      "common": false
+    }
+  ],
+  "recipes": [
+    {
+      "id": "unitools:spaghetti-carbonara",
+      "slug": "spaghetti-carbonara",
+      "title": "Спагетти карбонара",
+      "description": "Паста на четырёх ингредиентах: гуанчале, яйца, пекорино и перец. Сливок в ней нет и никогда не было.",
+      "categoryId": "pasta",
+      "tags": [],
+      "cookingTime": 25,
+      "servings": 2,
+      "image": "https://theunitools.com/recipes/spaghetti-carbonara.jpg",
+      "imageAttribution": "Amin · CC BY-SA 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "spaghetti",
+          "name": "Спагетти",
+          "quantity": 200,
+          "unit": "g",
+          "categoryId": "pasta",
+          "weightGrams": 200
+        },
+        {
+          "ingredientId": "ingredient-owx9fb",
+          "name": "Гуанчале",
+          "quantity": 100,
+          "unit": "g",
+          "weightGrams": 100
+        },
+        {
+          "ingredientId": "ingredient-l00838",
+          "name": "Яичные желтки",
+          "quantity": 3,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйцо целиком",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "ingredient-1pz26p7",
+          "name": "Пекорино романо",
+          "quantity": 60,
+          "unit": "g",
+          "weightGrams": 60
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Чёрный перец",
+          "quantity": 1,
+          "unit": "tsp",
+          "categoryId": "spices"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль для воды",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "spaghetti-carbonara",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 690,
+        "protein": 32,
+        "fat": 34,
+        "carbs": 62,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Поставьте кастрюлю с водой на сильный огонь и посолите её как следует — это единственная соль в блюде, сыр и гуанчале солёные сами по себе."
+        },
+        {
+          "text": "Выложите гуанчале на холодную сковороду и включите средний огонь. Жир должен вытопиться постепенно, а кусочки — стать золотистыми и хрустящими по краям, минут за 6–8."
+        },
+        {
+          "text": "Пока топится жир, разотрите желтки, целое яйцо, тёртый пекорино и перец в густую пасту. Она должна быть комнатной температуры, иначе свернётся от горячей пасты."
+        },
+        {
+          "text": "Отварите спагетти на минуту меньше, чем написано на упаковке. Перед тем как сливать, отлейте стакан воды от варки — без неё соус не соберётся."
+        },
+        {
+          "text": "Снимите сковороду с огня, переложите в неё пасту и перемешайте с жиром. Дайте сковороде остыть секунд двадцать: она должна быть тёплой, а не горячей."
+        },
+        {
+          "text": "Влейте яичную смесь и энергично мешайте, подливая воду от пасты по ложке, пока соус не станет гладким и не обволочёт каждую нить. Подавайте сразу."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 40
+    },
+    {
+      "id": "unitools:risotto-alla-milanese",
+      "slug": "risotto-alla-milanese",
+      "title": "Ризотто по-милански",
+      "description": "Шафрановое ризотто на бульоне, которое мешают почти непрерывно: от этого рис отдаёт крахмал и получается кремовым.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 35,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/risotto-alla-milanese.jpg",
+      "imageAttribution": "Tamorlan · CC BY-SA 3.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-cizrh6",
+          "name": "Рис карнароли",
+          "quantity": 320,
+          "unit": "g",
+          "weightGrams": 320
+        },
+        {
+          "ingredientId": "ingredient-1d3u8vn",
+          "name": "Бульон",
+          "quantity": 1.2,
+          "unit": "l"
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "ingredient-egfvck",
+          "name": "Сухое белое вино",
+          "quantity": 120,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 80,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 80
+        },
+        {
+          "ingredientId": "parmesan",
+          "name": "Пармезан",
+          "quantity": 80,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 80
+        },
+        {
+          "ingredientId": "ingredient-5zmb9u",
+          "name": "Шафран",
+          "quantity": 1,
+          "unit": "pinch"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "risotto-alla-milanese",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 560,
+        "protein": 15,
+        "fat": 22,
+        "carbs": 71,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Залейте шафран половником горячего бульона и оставьте настаиваться. Остальной бульон держите на слабом огне: холодный бульон останавливает варку."
+        },
+        {
+          "text": "Растопите половину масла и потомите лук на слабом огне до мягкости и прозрачности, не давая ему подрумяниться, минут восемь."
+        },
+        {
+          "text": "Всыпьте рис и мешайте пару минут, пока зёрна не станут по краям прозрачными, а в середине — молочно-белыми. Это тостатура, она держит форму зерна."
+        },
+        {
+          "text": "Влейте вино и дайте ему полностью выпариться — запах спирта должен уйти."
+        },
+        {
+          "text": "Подливайте бульон по половнику, помешивая, и ждите, пока рис почти впитает его перед следующим. Так минут восемнадцать, пока зерно не станет мягким снаружи и чуть упругим внутри."
+        },
+        {
+          "text": "Влейте шафрановый настой, снимите с огня и вбейте холодное масло с пармезаном, энергично встряхивая сковороду. Ризотто должно медленно растекаться по тарелке."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 43
+    },
+    {
+      "id": "unitools:ratatouille",
+      "slug": "ratatouille",
+      "title": "Рататуй",
+      "description": "Прованское овощное рагу, где каждый овощ обжаривают отдельно, а потом соединяют — иначе получится каша.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 65,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/ratatouille.jpg",
+      "imageAttribution": "Jack145945 · CC0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-1aqig2m",
+          "name": "Баклажан",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-hlvtdz",
+          "name": "Кабачок",
+          "quantity": 2,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-1kiow4p",
+          "name": "Сладкий перец",
+          "quantity": 2,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "tomato",
+          "name": "Помидоры",
+          "quantity": 600,
+          "unit": "g",
+          "categoryId": "vegetables",
+          "weightGrams": 600
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "garlic",
+          "name": "Чеснок",
+          "quantity": 3,
+          "unit": "clove",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "olive-oil",
+          "name": "Оливковое масло",
+          "quantity": 6,
+          "unit": "tbsp",
+          "categoryId": "oils"
+        },
+        {
+          "ingredientId": "ingredient-12z9jqn",
+          "name": "Тимьян",
+          "quantity": 3,
+          "unit": "sprig"
+        },
+        {
+          "ingredientId": "ingredient-1or31pa",
+          "name": "Базилик",
+          "quantity": 1,
+          "unit": "pinch"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "ratatouille",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 240,
+        "protein": 5,
+        "fat": 16,
+        "carbs": 20,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Обжарьте баклажан на сильном огне в двух ложках масла до румяных граней и отложите. Баклажан впитывает масло мгновенно — не добавляйте ещё, он отдаст его обратно."
+        },
+        {
+          "text": "В той же сковороде обжарьте кабачок до золотистого цвета, минуты четыре, и отложите к баклажану. Он должен остаться упругим."
+        },
+        {
+          "text": "Обжарьте перец до мягкости и лёгких подпалин и тоже отложите."
+        },
+        {
+          "text": "На оставшемся масле потомите лук до мягкости, добавьте чеснок и тимьян и держите на огне полминуты, до запаха."
+        },
+        {
+          "text": "Положите помидоры и уваривайте на среднем огне до густого соуса, минут двадцать. Он должен держаться на ложке, а не стекать."
+        },
+        {
+          "text": "Верните овощи в сковороду, посолите и прогрейте вместе десять минут на слабом огне. Снимите с огня, добавьте базилик и дайте постоять — рататуй вкуснее тёплым, чем горячим."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 38
+    },
+    {
+      "id": "unitools:french-onion-soup",
+      "slug": "french-onion-soup",
+      "title": "Луковый суп",
+      "description": "Суп из лука, бульона и хлеба с сыром. Весь вкус берётся из карамелизации, которая занимает не двадцать минут, а сорок.",
+      "categoryId": "soups",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 75,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/french-onion-soup.jpg",
+      "imageAttribution": "Ludovic Péron · CC BY-SA 3.0",
+      "ingredients": [
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 1,
+          "unit": "kg",
+          "categoryId": "vegetables",
+          "weightGrams": 1000
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 50,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 50
+        },
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 1,
+          "unit": "tbsp",
+          "categoryId": "baking"
+        },
+        {
+          "ingredientId": "ingredient-egfvck",
+          "name": "Сухое белое вино",
+          "quantity": 150,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "ingredient-r9kpbu",
+          "name": "Говяжий бульон",
+          "quantity": 1.2,
+          "unit": "l"
+        },
+        {
+          "ingredientId": "ingredient-8fjdxi",
+          "name": "Багет",
+          "quantity": 8,
+          "unit": "slice"
+        },
+        {
+          "ingredientId": "ingredient-bdce6u",
+          "name": "Грюйер",
+          "quantity": 150,
+          "unit": "g",
+          "weightGrams": 150
+        },
+        {
+          "ingredientId": "ingredient-12z9jqn",
+          "name": "Тимьян",
+          "quantity": 2,
+          "unit": "sprig"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "french-onion-soup",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 430,
+        "protein": 17,
+        "fat": 21,
+        "carbs": 40,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Растопите масло в толстостенной кастрюле, положите лук и щепотку соли и держите на среднем огне, помешивая каждые несколько минут. Первые двадцать минут лук будет отдавать воду."
+        },
+        {
+          "text": "Дальше начинается собственно карамелизация: лук темнеет до цвета крепкого чая ещё за двадцать пять минут. Если начинает пригорать — убавьте огонь и подлейте ложку воды."
+        },
+        {
+          "text": "Всыпьте муку и прогрейте пару минут, чтобы ушёл сырой привкус."
+        },
+        {
+          "text": "Влейте вино и соскребите лопаткой всё, что прилипло ко дну. Дайте выпариться наполовину."
+        },
+        {
+          "text": "Добавьте бульон и тимьян, доведите до кипения и варите на слабом огне двадцать минут. Посолите и поперчите в конце — бульон мог быть солёным."
+        },
+        {
+          "text": "Разлейте по жаропрочным мискам, положите сверху ломтик багета, засыпьте сыром и поставьте под гриль до пузырящейся корочки, минуты на три."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 38
+    },
+    {
+      "id": "unitools:borscht",
+      "slug": "borscht",
+      "title": "Борщ",
+      "description": "Свекольный суп на говяжьем бульоне, где кислота держит и цвет, и вкус. Свёклу тушат отдельно, а не варят в кастрюле.",
+      "categoryId": "soups",
+      "tags": [
+        "meat",
+        "family"
+      ],
+      "cookingTime": 150,
+      "servings": 6,
+      "image": "https://theunitools.com/recipes/borscht.jpg",
+      "imageAttribution": "liz west from Boxborough, MA · CC BY 2.0",
+      "ingredients": [
+        {
+          "ingredientId": "beef",
+          "name": "Говядина на кости",
+          "quantity": 700,
+          "unit": "g",
+          "categoryId": "meat",
+          "weightGrams": 700
+        },
+        {
+          "ingredientId": "beet",
+          "name": "Свёкла",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "cabbage",
+          "name": "Капуста",
+          "quantity": 300,
+          "unit": "g",
+          "categoryId": "vegetables",
+          "weightGrams": 300
+        },
+        {
+          "ingredientId": "potato",
+          "name": "Картофель",
+          "quantity": 4,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "carrot",
+          "name": "Морковь",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "tomato-paste",
+          "name": "Томатная паста",
+          "quantity": 2,
+          "unit": "tbsp",
+          "categoryId": "preserves"
+        },
+        {
+          "ingredientId": "vinegar",
+          "name": "Уксус 9 %",
+          "quantity": 1,
+          "unit": "tbsp",
+          "categoryId": "spices"
+        },
+        {
+          "ingredientId": "garlic",
+          "name": "Чеснок",
+          "quantity": 3,
+          "unit": "clove",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "bay",
+          "name": "Лавровый лист",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "spices"
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "dairy",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "borscht",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 320,
+        "protein": 18,
+        "fat": 14,
+        "carbs": 30,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Залейте мясо холодной водой, доведите до кипения и снимите пену. Варите на слабом огне полтора часа: бульон должен едва подрагивать, иначе он помутнеет."
+        },
+        {
+          "text": "Тушите свёклу на сковороде с ложкой масла, томатной пастой и уксусом минут двадцать под крышкой. Именно уксус здесь и сохраняет цвет."
+        },
+        {
+          "text": "Отдельно обжарьте лук с морковью до мягкости и золотистого цвета."
+        },
+        {
+          "text": "Достаньте мясо, разберите на куски и верните в бульон. Заложите картофель и варите десять минут — до того, как в кастрюлю попадёт кислота."
+        },
+        {
+          "text": "Добавьте капусту, через пять минут — свёклу и зажарку. Проварите ещё пять минут, положите лавровый лист и чеснок и сразу снимите с огня."
+        },
+        {
+          "text": "Дайте настояться под крышкой хотя бы двадцать минут. Подавайте со сметаной — она смягчает кислоту и связывает вкус."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 100
+    },
+    {
+      "id": "unitools:tortilla-espanola",
+      "slug": "tortilla-espanola",
+      "title": "Испанская тортилья",
+      "description": "Толстый омлет с картофелем и луком, где картофель не жарят, а томят в масле почти до состояния пюре.",
+      "categoryId": "breakfast",
+      "tags": [
+        "family",
+        "budget"
+      ],
+      "cookingTime": 50,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/tortilla-espanola.jpg",
+      "imageAttribution": "Charlie Marchant from UK · CC BY 2.0",
+      "ingredients": [
+        {
+          "ingredientId": "potato",
+          "name": "Картофель",
+          "quantity": 600,
+          "unit": "g",
+          "categoryId": "vegetables",
+          "weightGrams": 600
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйца",
+          "quantity": 6,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "olive-oil",
+          "name": "Оливковое масло",
+          "quantity": 400,
+          "unit": "ml",
+          "categoryId": "oils"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "tortilla-espanola",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 430,
+        "protein": 15,
+        "fat": 28,
+        "carbs": 30,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Разогрейте масло в глубокой сковороде до негорячего состояния — картофель, брошенный внутрь, должен лениво зашипеть, а не затрещать. Положите картофель с луком и посолите."
+        },
+        {
+          "text": "Томите двадцать минут, изредка переворачивая лопаткой. Готово, когда ломтик легко разламывается о край сковороды. Слейте масло через дуршлаг, картофель оставьте."
+        },
+        {
+          "text": "Взбейте яйца с щепоткой соли и вмешайте в них тёплый картофель. Дайте постоять десять минут: картофель отдаст крахмал, и тортилья будет держать форму."
+        },
+        {
+          "text": "На сковороде диаметром 24 см с ложкой масла вылейте смесь и жарьте на среднем огне четыре минуты, подводя края лопаткой к центру."
+        },
+        {
+          "text": "Накройте тарелкой, переверните одним движением и верните в сковороду сырой стороной вниз. Ещё три минуты — и центр останется чуть влажным, как и полагается."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 100
+    },
+    {
+      "id": "unitools:horiatiki-salata",
+      "slug": "horiatiki-salata",
+      "title": "Греческий салат",
+      "description": "Деревенский салат без листьев: помидоры, огурец, лук, оливки и целый кусок феты сверху.",
+      "categoryId": "salads",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 15,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/horiatiki-salata.jpg",
+      "imageAttribution": "User:Jpatokal · CC BY-SA 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-1k51akh",
+          "name": "Спелые помидоры",
+          "quantity": 4,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "cucumber",
+          "name": "Огурец",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "ingredient-109xmlr",
+          "name": "Красный лук",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-1ciodg7",
+          "name": "Зелёный перец",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-u3fiww",
+          "name": "Фета",
+          "quantity": 200,
+          "unit": "g",
+          "weightGrams": 200
+        },
+        {
+          "ingredientId": "ingredient-1qodowh",
+          "name": "Оливки каламата",
+          "quantity": 80,
+          "unit": "g",
+          "weightGrams": 80
+        },
+        {
+          "ingredientId": "olive-oil",
+          "name": "Оливковое масло",
+          "quantity": 60,
+          "unit": "ml",
+          "categoryId": "oils"
+        },
+        {
+          "ingredientId": "ingredient-waoh74",
+          "name": "Сушёный орегано",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "horiatiki-salata",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 320,
+        "protein": 10,
+        "fat": 27,
+        "carbs": 11,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Нарежьте помидоры крупными дольками и посолите прямо в миске. Оставьте на пять минут — они пустят сок, который станет основой заправки."
+        },
+        {
+          "text": "Добавьте огурец, перец и лук. Перемешайте руками, а не ложкой: так овощи не ломаются."
+        },
+        {
+          "text": "Разложите сверху оливки, положите кусок феты и полейте маслом всё вместе. Посыпьте орегано прямо по фете — от масла он раскроется."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 14
+    },
+    {
+      "id": "unitools:syrniki",
+      "slug": "syrniki",
+      "title": "Сырники",
+      "description": "Творожные оладьи, где творога должно быть много, а муки — ровно столько, чтобы они не развалились.",
+      "categoryId": "breakfast",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 30,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/syrniki.jpg",
+      "imageAttribution": "Juerg Vollmer from Zürich, Switzerland ; cut by Off-shell · CC BY-SA 2.0",
+      "ingredients": [
+        {
+          "ingredientId": "curd",
+          "name": "Творог 5–9 %",
+          "quantity": 500,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйцо",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 3,
+          "unit": "tbsp",
+          "categoryId": "baking"
+        },
+        {
+          "ingredientId": "sugar",
+          "name": "Сахар",
+          "quantity": 1,
+          "unit": "tbsp",
+          "categoryId": "baking"
+        },
+        {
+          "ingredientId": "ingredient-1uxrpos",
+          "name": "Ванильный сахар",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 1,
+          "unit": "pinch",
+          "categoryId": "spices"
+        },
+        {
+          "ingredientId": "oil",
+          "name": "Масло для жарки",
+          "quantity": 30,
+          "unit": "g",
+          "categoryId": "oils",
+          "weightGrams": 30
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "dairy",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "ingredient-1us4nb8",
+          "name": "Варенье",
+          "quantity": 0,
+          "unit": "toTaste",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "syrniki",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 340,
+        "protein": 22,
+        "fat": 16,
+        "carbs": 26,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Протрите творог через сито или пробейте блендером. Зернистый творог даёт зернистые сырники — этот шаг пропускать нельзя."
+        },
+        {
+          "text": "Вмешайте яйцо, сахар, ваниль и соль, затем муку. Тесто останется липким — так и должно быть."
+        },
+        {
+          "text": "Мокрыми или подпылёнными мукой руками сформуйте шайбы толщиной около полутора сантиметров. Толще — не прожарятся, тоньше — пересохнут."
+        },
+        {
+          "text": "Жарьте на среднем огне под крышкой по три-четыре минуты с каждой стороны. Крышка здесь важнее масла: она пропаривает середину."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 71
+    },
+    {
+      "id": "unitools:tiramisu",
+      "slug": "tiramisu",
+      "title": "Тирамису",
+      "description": "Савоярди в кофе под кремом из маскарпоне. Без выпечки, но с двумя местами, где всё может пойти не так.",
+      "categoryId": "desserts",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 30,
+      "servings": 6,
+      "image": "https://theunitools.com/recipes/tiramisu.jpg",
+      "imageAttribution": "Missvain · CC BY 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-14vlalt",
+          "name": "Маскарпоне",
+          "quantity": 500,
+          "unit": "g",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "ingredient-14delxz",
+          "name": "Желтки",
+          "quantity": 4,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-175y40i",
+          "name": "Белки",
+          "quantity": 2,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "sugar",
+          "name": "Сахар",
+          "quantity": 100,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 100
+        },
+        {
+          "ingredientId": "ingredient-yree7r",
+          "name": "Савоярди",
+          "quantity": 300,
+          "unit": "g",
+          "weightGrams": 300
+        },
+        {
+          "ingredientId": "ingredient-144r1cw",
+          "name": "Крепкий эспрессо",
+          "quantity": 350,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "ingredient-1aweo1d",
+          "name": "Марсала",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ingredientId": "ingredient-caolt0",
+          "name": "Какао-порошок",
+          "quantity": 0,
+          "unit": "toTaste",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "tiramisu",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 520,
+        "protein": 10,
+        "fat": 34,
+        "carbs": 42,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Взбейте желтки с половиной сахара над кастрюлей с кипящей водой, не касаясь воды, до светлой густой массы — примерно семь минут. Снимите и остудите до комнатной температуры."
+        },
+        {
+          "text": "Вмешайте холодный маскарпоне в остывшие желтки ложкой, а не миксером. Миксер разбивает жир, и крем становится зернистым — это первая точка, где тирамису обычно портят."
+        },
+        {
+          "text": "Взбейте белки с оставшимся сахаром до устойчивых пиков и вмешайте в крем в три приёма движением снизу вверх."
+        },
+        {
+          "text": "Смешайте кофе с марсалой. Окунайте савоярди на одну секунду каждой стороной и укладывайте плотным слоем в форму."
+        },
+        {
+          "text": "Выложите половину крема, разровняйте, повторите слой печенья и крема. Затяните плёнкой и уберите в холодильник минимум на шесть часов, лучше на ночь."
+        },
+        {
+          "text": "Посыпьте какао через сито непосредственно перед подачей. Если сделать это заранее, какао впитает влагу и станет пятнистым."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 13
+    },
+    {
+      "id": "unitools:gazpacho",
+      "slug": "gazpacho",
+      "title": "Гаспачо",
+      "description": "Холодный томатный суп, который взбивают с хлебом и маслом до состояния эмульсии — от этого он и получается плотным, а не водянистым.",
+      "categoryId": "soups",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 20,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/gazpacho.jpg",
+      "imageAttribution": "Haydn Blackey · CC BY-SA 2.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-1k51akh",
+          "name": "Спелые помидоры",
+          "quantity": 1,
+          "unit": "kg",
+          "weightGrams": 1000
+        },
+        {
+          "ingredientId": "cucumber",
+          "name": "Огурец",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "ingredient-1ciodg7",
+          "name": "Зелёный перец",
+          "quantity": 0.5,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "garlic",
+          "name": "Чеснок",
+          "quantity": 1,
+          "unit": "clove",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "ingredient-1gqlipd",
+          "name": "Чёрствый белый хлеб",
+          "quantity": 80,
+          "unit": "g",
+          "weightGrams": 80
+        },
+        {
+          "ingredientId": "ingredient-13x9ew8",
+          "name": "Оливковое масло экстра вирджин",
+          "quantity": 80,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "ingredient-1tg696q",
+          "name": "Хересный уксус",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "gazpacho",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 220,
+        "protein": 4,
+        "fat": 16,
+        "carbs": 17,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Размочите мякиш в холодной воде десять минут и отожмите досуха."
+        },
+        {
+          "text": "Пробейте в блендере помидоры, огурец, перец, чеснок и хлеб до полной гладкости. Это займёт дольше, чем кажется: минуты две на максимуме."
+        },
+        {
+          "text": "Не выключая блендер, влейте масло тонкой струйкой. Суп посветлеет и загустеет — это и есть та самая эмульсия."
+        },
+        {
+          "text": "Добавьте уксус и соль, попробуйте и досолите. Протрите через сито, если хотите шелковистую текстуру, и охладите не меньше двух часов."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 29
+    },
+    {
+      "id": "unitools:creme-brulee",
+      "slug": "creme-brulee",
+      "title": "Крем-брюле",
+      "description": "Заварной крем на желтках, запечённый на водяной бане и покрытый коркой из сожжённого сахара.",
+      "categoryId": "desserts",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 65,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/creme-brulee.jpg",
+      "imageAttribution": "Takeaway · CC BY-SA 3.0",
+      "ingredients": [
+        {
+          "ingredientId": "cream",
+          "name": "Сливки 33 %",
+          "quantity": 500,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "ingredient-14delxz",
+          "name": "Желтки",
+          "quantity": 5,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-1mhq1lk",
+          "name": "Сахар в крем",
+          "quantity": 80,
+          "unit": "g",
+          "weightGrams": 80
+        },
+        {
+          "ingredientId": "ingredient-q1p8f0",
+          "name": "Стручок ванили",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-n9hpu8",
+          "name": "Сахар для корочки",
+          "quantity": 4,
+          "unit": "tsp"
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "creme-brulee",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 490,
+        "protein": 6,
+        "fat": 42,
+        "carbs": 24,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Разрежьте ваниль вдоль, выскоблите семена и прогрейте со сливками почти до кипения. Снимите и дайте настояться пятнадцать минут."
+        },
+        {
+          "text": "Разотрите желтки с сахаром без пены — воздух здесь не нужен. Влейте тёплые сливки тонкой струйкой, непрерывно мешая."
+        },
+        {
+          "text": "Процедите через сито и снимите пену с поверхности. Разлейте по формам и поставьте их в глубокий противень."
+        },
+        {
+          "text": "Налейте в противень кипяток до половины высоты форм и запекайте при 150 °C сорок минут. Центр должен подрагивать."
+        },
+        {
+          "text": "Полностью остудите и держите в холодильнике не меньше четырёх часов. Только потом посыпьте сахаром и сожгите горелкой."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 20
+    },
+    {
+      "id": "unitools:pierogi-ruskie",
+      "slug": "pierogi-ruskie",
+      "title": "Вареники с картофелем и творогом",
+      "description": "Вареники с картофелем и творожным сыром, поданные с жареным луком и сметаной.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 70,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/pierogi-ruskie.jpg",
+      "imageAttribution": "MOs810 · CC BY-SA 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 400,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "water",
+          "name": "Кипяток",
+          "quantity": 200,
+          "unit": "ml",
+          "categoryId": "pantry"
+        },
+        {
+          "ingredientId": "oil",
+          "name": "Растительное масло",
+          "quantity": 2,
+          "unit": "tbsp",
+          "categoryId": "oils"
+        },
+        {
+          "ingredientId": "potato",
+          "name": "Картофель",
+          "quantity": 500,
+          "unit": "g",
+          "categoryId": "vegetables",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "ingredient-f9vm9i",
+          "name": "Сухой творог",
+          "quantity": 250,
+          "unit": "g",
+          "weightGrams": 250
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 3,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 60,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 60
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "dairy",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "pierogi-ruskie",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 590,
+        "protein": 20,
+        "fat": 20,
+        "carbs": 82,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Залейте муку кипятком с маслом и солью, замесите ложкой, а когда остынет — руками, минут восемь. Накройте и дайте отдохнуть полчаса."
+        },
+        {
+          "text": "Обжарьте два луковицы в масле до тёмно-золотого цвета. Половину вмешайте в начинку, половину оставьте для подачи."
+        },
+        {
+          "text": "Разомните тёплый картофель с творогом и жареным луком, посолите и поперчите щедро. Начинка должна быть плотной, чтобы держала форму."
+        },
+        {
+          "text": "Раскатайте тесто в два миллиметра, вырежьте кружки стаканом, положите чайную ложку начинки и защипните края насухо — мокрое тесто не склеится."
+        },
+        {
+          "text": "Варите партиями в широкой кастрюле подсоленной воды. Через минуту после всплытия вынимайте шумовкой."
+        },
+        {
+          "text": "Подавайте с оставшимся жареным луком и сметаной. Многие обжаривают варёные пероги на сливочном масле — так тоже правильно."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 83
+    },
+    {
+      "id": "unitools:schwaebischer-kartoffelsalat",
+      "slug": "schwaebischer-kartoffelsalat",
+      "title": "Картофельный салат",
+      "description": "Картофель, заправленный тёплым бульоном с уксусом и маслом. Никакого майонеза — южная Германия его здесь не признаёт.",
+      "categoryId": "salads",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 40,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/schwaebischer-kartoffelsalat.jpg",
+      "imageAttribution": "Brücke-Osteuropa · CC0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-2dpfhh",
+          "name": "Восковой картофель",
+          "quantity": 800,
+          "unit": "g",
+          "weightGrams": 800
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "ingredient-akd4g2",
+          "name": "Горячий овощной бульон",
+          "quantity": 250,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "ingredient-ex39ml",
+          "name": "Винный уксус",
+          "quantity": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ingredientId": "ingredient-sxmbyt",
+          "name": "Горчица",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "oil",
+          "name": "Растительное масло",
+          "quantity": 4,
+          "unit": "tbsp",
+          "categoryId": "oils"
+        },
+        {
+          "ingredientId": "ingredient-9kc5ns",
+          "name": "Зелёный лук",
+          "quantity": 0,
+          "unit": "toTaste",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "schwaebischer-kartoffelsalat",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 290,
+        "protein": 5,
+        "fat": 14,
+        "carbs": 36,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Отварите картофель в мундире до готовности — двадцать минут после закипания. Проверяйте ножом: он должен входить, но не проваливаться."
+        },
+        {
+          "text": "Пока варится картофель, прогрейте бульон с луком, уксусом, горчицей, солью и перцем, не доводя до кипения."
+        },
+        {
+          "text": "Очистите картофель горячим — держите вилкой — и нарежьте ломтиками в три-четыре миллиметра прямо в миску."
+        },
+        {
+          "text": "Залейте горячей заправкой и оставьте на двадцать минут, перемешав один раз. Картофель впитает почти всю жидкость."
+        },
+        {
+          "text": "Влейте масло, перемешайте ещё раз и попробуйте. Салат должен быть чуть кислее, чем кажется правильным, — вкус выровняется, пока он стоит."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 17
+    },
+    {
+      "id": "unitools:bucatini-all-amatriciana",
+      "slug": "bucatini-all-amatriciana",
+      "title": "Аматричана",
+      "description": "Гуанчале, помидоры и пекорино. Ни лука, ни чеснока, ни оливкового масла — жир даёт само мясо.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 30,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/bucatini-all-amatriciana.jpg",
+      "imageAttribution": "stu_spivack · CC BY-SA 2.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-yusna0",
+          "name": "Букатини",
+          "quantity": 400,
+          "unit": "g",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "ingredient-owx9fb",
+          "name": "Гуанчале",
+          "quantity": 150,
+          "unit": "g",
+          "weightGrams": 150
+        },
+        {
+          "ingredientId": "ingredient-1m0s7om",
+          "name": "Помидоры сан-марцано",
+          "quantity": 400,
+          "unit": "g",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "ingredient-1pz26p7",
+          "name": "Пекорино романо",
+          "quantity": 80,
+          "unit": "g",
+          "weightGrams": 80
+        },
+        {
+          "ingredientId": "ingredient-bwiwtw",
+          "name": "Сушёный перчик чили",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-kk33no",
+          "name": "Белое сухое вино",
+          "quantity": 60,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "bucatini-all-amatriciana",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 610,
+        "protein": 24,
+        "fat": 24,
+        "carbs": 74,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Положите гуанчале в холодную сухую сковороду и включите средний огонь. Медленный старт вытапливает жир целиком; на раскалённой сковороде он подгорит снаружи, оставшись жёстким внутри."
+        },
+        {
+          "text": "Когда кусочки станут стеклянными и золотыми по краям, выньте половину — они пойдут сверху. Влейте вино и дайте ему выпариться."
+        },
+        {
+          "text": "Разомните помидоры руками, добавьте с чили и тушите десять минут. Соус должен загустеть, но не потерять красный цвет."
+        },
+        {
+          "text": "Отварите букатини на минуту меньше указанного, переложите в соус с половником воды от варки и доведите на огне полминуты."
+        },
+        {
+          "text": "Снимите с огня, вмешайте пекорино и разложите. Сверху — отложенный гуанчале и ещё немного сыра."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 0
+    },
+    {
+      "id": "unitools:fish-and-chips",
+      "slug": "fish-and-chips",
+      "title": "Фиш-энд-чипс",
+      "description": "Треска в пивном кляре и картофель, жаренный дважды. Кляр держится на холоде и на газе в пиве.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 60,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/fish-and-chips.jpg",
+      "imageAttribution": "Matthias Meckel · CC BY-SA 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-116f0d1",
+          "name": "Филе трески",
+          "quantity": 800,
+          "unit": "g",
+          "weightGrams": 800
+        },
+        {
+          "ingredientId": "potato",
+          "name": "Картофель",
+          "quantity": 1,
+          "unit": "kg",
+          "categoryId": "vegetables",
+          "weightGrams": 1000
+        },
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 200,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 200
+        },
+        {
+          "ingredientId": "ingredient-og1qle",
+          "name": "Кукурузный крахмал",
+          "quantity": 50,
+          "unit": "g",
+          "weightGrams": 50
+        },
+        {
+          "ingredientId": "ingredient-1rhtvha",
+          "name": "Светлое пиво",
+          "quantity": 300,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "ingredient-11oo7iz",
+          "name": "Разрыхлитель",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "oil",
+          "name": "Масло для фритюра",
+          "quantity": 1.5,
+          "unit": "l",
+          "categoryId": "oils"
+        },
+        {
+          "ingredientId": "ingredient-kqkb9",
+          "name": "Солодовый уксус",
+          "quantity": 0,
+          "unit": "toTaste",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "fish-and-chips",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 890,
+        "protein": 46,
+        "fat": 40,
+        "carbs": 88,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Промойте нарезанный картофель от крахмала, обсушите досуха и обжарьте при 140 °C шесть минут. Он должен стать мягким, но остаться бледным. Выложите остывать."
+        },
+        {
+          "text": "Смешайте муку, крахмал и разрыхлитель. Влейте ледяное пиво и размешайте венчиком буквально несколько раз — комочки допустимы, перемешанный кляр становится жёстким."
+        },
+        {
+          "text": "Обсушите рыбу, обваляйте в сухой муке и стряхните излишки. Без этого шага кляр соскользнёт при жарке."
+        },
+        {
+          "text": "Разогрейте масло до 190 °C. Окуните рыбу в кляр, дайте лишнему стечь и опустите, придерживая пару секунд, чтобы кусок не прилип ко дну. Жарьте шесть минут."
+        },
+        {
+          "text": "Выньте рыбу и в том же масле дожарьте картофель три минуты до золотого цвета. Посолите сразу, пока горячий."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 29
+    },
+    {
+      "id": "unitools:shepherds-pie",
+      "slug": "shepherds-pie",
+      "title": "Пастуший пирог",
+      "description": "Баранина в густом соусе под картофельным пюре, запечённая до румяной корочки.",
+      "categoryId": "baking",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 90,
+      "servings": 6,
+      "image": "https://theunitools.com/recipes/shepherds-pie.jpg",
+      "imageAttribution": "JIP · CC BY-SA 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-mgkxlm",
+          "name": "Фарш из баранины",
+          "quantity": 700,
+          "unit": "g",
+          "weightGrams": 700
+        },
+        {
+          "ingredientId": "potato",
+          "name": "Картофель",
+          "quantity": 1,
+          "unit": "kg",
+          "categoryId": "vegetables",
+          "weightGrams": 1000
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "carrot",
+          "name": "Морковь",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "ingredient-11bgk4e",
+          "name": "Зелёный горошек",
+          "quantity": 150,
+          "unit": "g",
+          "weightGrams": 150
+        },
+        {
+          "ingredientId": "tomato-paste",
+          "name": "Томатная паста",
+          "quantity": 2,
+          "unit": "tbsp",
+          "categoryId": "preserves"
+        },
+        {
+          "ingredientId": "ingredient-1ydej5n",
+          "name": "Вустерский соус",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ingredientId": "ingredient-x0acav",
+          "name": "Мясной бульон",
+          "quantity": 300,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 2,
+          "unit": "tbsp",
+          "categoryId": "baking"
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 60,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 60
+        },
+        {
+          "ingredientId": "milk",
+          "name": "Молоко",
+          "quantity": 120,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "ingredient-12z9jqn",
+          "name": "Тимьян",
+          "quantity": 3,
+          "unit": "sprig"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "shepherds-pie",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 620,
+        "protein": 34,
+        "fat": 32,
+        "carbs": 48,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Обжарьте фарш на сильном огне, не перемешивая первую минуту, до тёмных подпалин. Выложите, слив лишний жир."
+        },
+        {
+          "text": "В том же сотейнике обжарьте лук с морковью восемь минут, добавьте муку и томатную пасту и прогрейте две минуты."
+        },
+        {
+          "text": "Верните мясо, влейте бульон и вустерский соус, добавьте тимьян и тушите двадцать минут без крышки, пока соус не станет густым."
+        },
+        {
+          "text": "Отварите картофель, разомните с маслом и горячим молоком до гладкости, посолите щедро. Пюре должно быть плотным, а не текучим."
+        },
+        {
+          "text": "Вмешайте горошек в мясо, переложите в форму, накройте пюре и разровняйте вилкой, оставив бороздки."
+        },
+        {
+          "text": "Запекайте при 200 °C двадцать пять минут до румяной корочки. Дайте постоять десять минут перед тем, как резать."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 58
+    },
+    {
+      "id": "unitools:apfelstrudel",
+      "slug": "apfelstrudel",
+      "title": "Яблочный штрудель",
+      "description": "Яблоки с корицей и изюмом в тесте, растянутом до прозрачности. Тесто тянут руками, а не раскатывают.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 105,
+      "servings": 8,
+      "image": "https://theunitools.com/recipes/apfelstrudel.jpg",
+      "imageAttribution": "Burkhard Mücke · CC BY-SA 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-15mjyg0",
+          "name": "Мука высокобелковая",
+          "quantity": 250,
+          "unit": "g",
+          "weightGrams": 250
+        },
+        {
+          "ingredientId": "ingredient-wdk0mh",
+          "name": "Тёплая вода",
+          "quantity": 125,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "oil",
+          "name": "Растительное масло",
+          "quantity": 3,
+          "unit": "tbsp",
+          "categoryId": "oils"
+        },
+        {
+          "ingredientId": "ingredient-1llt42e",
+          "name": "Кислые яблоки",
+          "quantity": 1,
+          "unit": "kg",
+          "weightGrams": 1000
+        },
+        {
+          "ingredientId": "sugar",
+          "name": "Сахар",
+          "quantity": 100,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 100
+        },
+        {
+          "ingredientId": "ingredient-dzmv4n",
+          "name": "Корица",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "ingredient-b03vci",
+          "name": "Изюм",
+          "quantity": 80,
+          "unit": "g",
+          "weightGrams": 80
+        },
+        {
+          "ingredientId": "ingredient-1xl7hf6",
+          "name": "Панировочные сухари",
+          "quantity": 80,
+          "unit": "g",
+          "weightGrams": 80
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 120,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 120
+        },
+        {
+          "ingredientId": "lemon",
+          "name": "Лимон",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "fruit"
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "apfelstrudel",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 420,
+        "protein": 5,
+        "fat": 16,
+        "carbs": 66,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Замесите тесто из муки, тёплой воды, масла и щепотки соли и вымешивайте десять минут — оно должно стать гладким и очень эластичным. Смажьте маслом, накройте и оставьте на час."
+        },
+        {
+          "text": "Обжарьте сухари в половине масла до золотистого цвета. Яблоки смешайте с сахаром, корицей, изюмом, соком и цедрой лимона."
+        },
+        {
+          "text": "Расстелите на столе полотенце, присыпьте мукой и растяните тесто тыльной стороной ладоней от центра к краям, пока оно не станет прозрачным. Толстые края обрежьте."
+        },
+        {
+          "text": "Смажьте тесто растопленным маслом, посыпьте сухарями треть поверхности и выложите на них яблоки, отступив от краёв."
+        },
+        {
+          "text": "Заверните рулетом, поднимая полотенце, — руками тесто порвётся. Подверните края, переложите швом вниз и смажьте маслом."
+        },
+        {
+          "text": "Выпекайте при 190 °C сорок минут, смазывая маслом дважды за это время. Подавайте тёплым с сахарной пудрой."
+        }
+      ],
+      "difficulty": "hard",
+      "isActive": true,
+      "shopabilityScore": 33
+    },
+    {
+      "id": "unitools:varenyky-z-vyshnyamy",
+      "slug": "varenyky-z-vyshnyamy",
+      "title": "Вареники с вишней",
+      "description": "Вареники с целой вишней и сахаром. Сок остаётся внутри, если ягоду обвалять в крахмале.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 65,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/varenyky-z-vyshnyamy.jpg",
+      "imageAttribution": "Maksym Kozlenko · CC BY-SA 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 450,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 450
+        },
+        {
+          "ingredientId": "ingredient-17byb0c",
+          "name": "Кефир",
+          "quantity": 250,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйцо",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "ingredient-q2ndya",
+          "name": "Сода",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "ingredient-hj1uoh",
+          "name": "Вишня без косточек",
+          "quantity": 600,
+          "unit": "g",
+          "weightGrams": 600
+        },
+        {
+          "ingredientId": "sugar",
+          "name": "Сахар",
+          "quantity": 120,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 120
+        },
+        {
+          "ingredientId": "ingredient-klxdh",
+          "name": "Крахмал",
+          "quantity": 3,
+          "unit": "tbsp"
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 50,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 50
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "dairy",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 1,
+          "unit": "pinch",
+          "categoryId": "spices"
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "varenyky-z-vyshnyamy",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 520,
+        "protein": 12,
+        "fat": 12,
+        "carbs": 92,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Смешайте кефир с содой и оставьте на пять минут — пойдут пузыри. Добавьте яйцо, соль и муку и вымешивайте восемь минут."
+        },
+        {
+          "text": "Накройте тесто и дайте отдохнуть полчаса. За это время дайте вишне стечь на дуршлаге."
+        },
+        {
+          "text": "Смешайте крахмал с сахаром и обваляйте в них вишню непосредственно перед лепкой."
+        },
+        {
+          "text": "Раскатайте тесто в два миллиметра, вырежьте кружки, положите по три-четыре ягоды и защипните край насухо, выпуская воздух."
+        },
+        {
+          "text": "Варите в широкой кастрюле подсоленного кипятка партиями. Через две минуты после всплытия вынимайте шумовкой и сразу смазывайте маслом."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 56
+    },
+    {
+      "id": "unitools:koettbullar",
+      "slug": "koettbullar",
+      "title": "Шведские фрикадельки",
+      "description": "Мясные шарики на панаде из хлеба и сливок, в сливочном соусе, с брусникой и картофельным пюре.",
+      "categoryId": "mains",
+      "tags": [
+        "meat",
+        "family"
+      ],
+      "cookingTime": 60,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/koettbullar.jpg",
+      "imageAttribution": "Number55 · CC BY-SA 3.0",
+      "ingredients": [
+        {
+          "ingredientId": "beef-mince",
+          "name": "Говяжий фарш",
+          "quantity": 400,
+          "unit": "g",
+          "categoryId": "meat",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "pork-mince",
+          "name": "Свиной фарш",
+          "quantity": 200,
+          "unit": "g",
+          "categoryId": "meat",
+          "weightGrams": 200
+        },
+        {
+          "ingredientId": "bread",
+          "name": "Белый хлеб",
+          "quantity": 60,
+          "unit": "g",
+          "categoryId": "bread",
+          "weightGrams": 60
+        },
+        {
+          "ingredientId": "cream",
+          "name": "Сливки",
+          "quantity": 300,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйцо",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "ingredient-165v6ob",
+          "name": "Душистый перец молотый",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "ingredient-r9kpbu",
+          "name": "Говяжий бульон",
+          "quantity": 300,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 2,
+          "unit": "tbsp",
+          "categoryId": "baking"
+        },
+        {
+          "ingredientId": "ingredient-1ujd4is",
+          "name": "Соевый соус",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 60,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 60
+        },
+        {
+          "ingredientId": "ingredient-1dtvz2r",
+          "name": "Брусничное варенье",
+          "quantity": 0,
+          "unit": "toTaste",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "koettbullar",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 690,
+        "protein": 38,
+        "fat": 48,
+        "carbs": 24,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Замочите хлеб в ста миллилитрах сливок на десять минут и разомните в кашицу."
+        },
+        {
+          "text": "Обжарьте лук в масле до мягкости и полностью остудите — тёплый лук начнёт готовить фарш."
+        },
+        {
+          "text": "Смешайте оба фарша с панадой, луком, яйцом, душистым перцем и солью и вымешивайте пять минут до липкости."
+        },
+        {
+          "text": "Скатайте шарики размером с грецкий орех мокрыми руками и обжарьте в масле партиями, встряхивая сковороду, чтобы они катались и румянились равномерно."
+        },
+        {
+          "text": "В той же сковороде размешайте муку с оставшимся жиром, влейте бульон и остальные сливки, добавьте соевый соус и варите пять минут до густоты."
+        },
+        {
+          "text": "Верните фрикадельки в соус и прогрейте пять минут. Подавайте с картофельным пюре, брусникой и солёным огурцом."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 67
+    },
+    {
+      "id": "unitools:pizza-margherita",
+      "slug": "pizza-margherita",
+      "title": "Пицца маргарита",
+      "description": "Тесто долгого брожения, помидоры без варки, моцарелла и базилик. Всё решает время, а не количество ингредиентов.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 70,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/pizza-margherita.jpg",
+      "imageAttribution": "Dale Cruse from San Francisco, CA, USA · CC BY 2.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-1hsshmx",
+          "name": "Мука типа 00",
+          "quantity": 500,
+          "unit": "g",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "water",
+          "name": "Вода",
+          "quantity": 325,
+          "unit": "ml",
+          "categoryId": "pantry"
+        },
+        {
+          "ingredientId": "ingredient-1djt11c",
+          "name": "Свежие дрожжи",
+          "quantity": 1,
+          "unit": "g",
+          "weightGrams": 1
+        },
+        {
+          "ingredientId": "ingredient-19vqqf7",
+          "name": "Соль в тесто",
+          "quantity": 12,
+          "unit": "g",
+          "weightGrams": 12
+        },
+        {
+          "ingredientId": "ingredient-1m0s7om",
+          "name": "Помидоры сан-марцано",
+          "quantity": 400,
+          "unit": "g",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "ingredient-cik7q0",
+          "name": "Моцарелла фиор ди латте",
+          "quantity": 300,
+          "unit": "g",
+          "weightGrams": 300
+        },
+        {
+          "ingredientId": "ingredient-1or31pa",
+          "name": "Базилик",
+          "quantity": 20,
+          "unit": "g",
+          "weightGrams": 20
+        },
+        {
+          "ingredientId": "olive-oil",
+          "name": "Оливковое масло",
+          "quantity": 4,
+          "unit": "tbsp",
+          "categoryId": "oils"
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "pizza-margherita",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 720,
+        "protein": 30,
+        "fat": 26,
+        "carbs": 92,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Растворите дрожжи в воде, добавьте муку и мешайте до грубого теста. Дайте постоять двадцать минут, потом вмешайте соль и вымешивайте десять минут до гладкости."
+        },
+        {
+          "text": "Оставьте на два часа при комнатной температуре, затем разделите на четыре шара и уберите в холодильник на сутки."
+        },
+        {
+          "text": "Достаньте тесто за три часа до выпечки. Разомните помидоры руками с щепоткой соли — соус готов."
+        },
+        {
+          "text": "Разогрейте духовку с камнем или сталью на максимуме не меньше часа. Это дольше, чем кажется нужным, и это обязательно."
+        },
+        {
+          "text": "Растяните шар пальцами от центра к краям, оставляя бортик нетронутым. Скалку не берите: она выдавит воздух из бортика, и он не поднимется."
+        },
+        {
+          "text": "Нанесите тонкий слой соуса, разложите моцареллу, сбрызните маслом. Выпекайте семь-девять минут до пятнистого бортика и добавьте базилик уже на готовую."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 0
+    },
+    {
+      "id": "unitools:quiche-lorraine",
+      "slug": "quiche-lorraine",
+      "title": "Киш лорен",
+      "description": "Песочная основа с беконом и заливкой из сливок с яйцами. Ни сыра, ни лука — в классическом рецепте их нет.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 100,
+      "servings": 6,
+      "image": "https://theunitools.com/recipes/quiche-lorraine.jpg",
+      "imageAttribution": "Ghouston · CC0",
+      "ingredients": [
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 250,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 250
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 125,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 125
+        },
+        {
+          "ingredientId": "ingredient-yhfdyf",
+          "name": "Яйцо в тесто",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-86nyki",
+          "name": "Ледяная вода",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ingredientId": "ingredient-1aew0gt",
+          "name": "Копчёная грудинка",
+          "quantity": 250,
+          "unit": "g",
+          "weightGrams": 250
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйца",
+          "quantity": 3,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "cream",
+          "name": "Сливки 33 %",
+          "quantity": 200,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "milk",
+          "name": "Молоко",
+          "quantity": 100,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "ingredient-1lywraw",
+          "name": "Мускатный орех",
+          "quantity": 1,
+          "unit": "pinch"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "quiche-lorraine",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 580,
+        "protein": 20,
+        "fat": 44,
+        "carbs": 28,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Порубите холодное масло с мукой и щепоткой соли в крошку, добавьте яйцо и ледяную воду и соберите тесто, не вымешивая. Уберите в холод на час."
+        },
+        {
+          "text": "Раскатайте тесто, выложите в форму, наколите вилкой и снова уберите в холод на двадцать минут — это защищает от усадки."
+        },
+        {
+          "text": "Накройте пергаментом с грузом и выпекайте вслепую при 190 °C пятнадцать минут, потом снимите груз и допеките пять минут до сухого дна."
+        },
+        {
+          "text": "Вытопите грудинку до румяности и обсушите на бумаге — лишний жир расслоит заливку."
+        },
+        {
+          "text": "Взбейте яйца со сливками и молоком без пены, приправьте мускатом и перцем. Соль почти не нужна — грудинка солёная."
+        },
+        {
+          "text": "Разложите грудинку по основе, залейте и выпекайте при 170 °C тридцать пять минут. Центр должен чуть подрагивать, когда вынимаете."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 56
+    },
+    {
+      "id": "unitools:croissant",
+      "slug": "croissant",
+      "title": "Круассан",
+      "description": "Слоёное дрожжевое тесто с двадцатью семью слоями масла. Всё решает температура: тесто и масло должны быть одинаково холодными.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 200,
+      "servings": 8,
+      "image": "https://theunitools.com/recipes/croissant.jpg",
+      "imageAttribution": "Sarah Stierch · CC BY 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-15mjyg0",
+          "name": "Мука высокобелковая",
+          "quantity": 500,
+          "unit": "g",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "ingredient-105zkyo",
+          "name": "Холодное молоко",
+          "quantity": 280,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "ingredient-1djt11c",
+          "name": "Свежие дрожжи",
+          "quantity": 15,
+          "unit": "g",
+          "weightGrams": 15
+        },
+        {
+          "ingredientId": "sugar",
+          "name": "Сахар",
+          "quantity": 55,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 55
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 11,
+          "unit": "g",
+          "categoryId": "spices",
+          "weightGrams": 11
+        },
+        {
+          "ingredientId": "ingredient-1f9j1f3",
+          "name": "Масло в тесто",
+          "quantity": 40,
+          "unit": "g",
+          "weightGrams": 40
+        },
+        {
+          "ingredientId": "ingredient-msly1a",
+          "name": "Масло для слоения",
+          "quantity": 280,
+          "unit": "g",
+          "weightGrams": 280
+        },
+        {
+          "ingredientId": "ingredient-27ok9v",
+          "name": "Яйцо для смазки",
+          "quantity": 1,
+          "unit": "piece"
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "croissant",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 420,
+        "protein": 8,
+        "fat": 26,
+        "carbs": 40,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Замесите тесто из муки, холодного молока, дрожжей, сахара, соли и мягкого масла пять минут. Не перемешивайте дольше: сильная клейковина помешает раскатке."
+        },
+        {
+          "text": "Расплющите тесто в прямоугольник, заверните и уберите в холодильник минимум на четыре часа, лучше на ночь."
+        },
+        {
+          "text": "Отбейте холодное масло скалкой в квадрат толщиной в сантиметр и держите в холоде. Оно должно гнуться, но не ломаться и не таять."
+        },
+        {
+          "text": "Раскатайте тесто вдвое больше масляного квадрата, положите масло по центру и заверните края конвертом, защипнув швы."
+        },
+        {
+          "text": "Раскатайте в длинный прямоугольник и сложите втрое. Уберите в холод на сорок минут. Повторите ещё два раза — всего три сложения."
+        },
+        {
+          "text": "Раскатайте пласт толщиной четыре миллиметра, нарежьте треугольниками с основанием десять сантиметров и сверните от основания к вершине, слегка натягивая."
+        },
+        {
+          "text": "Расстаивайте два часа при 25 °C — не теплее, иначе масло вытечет. Смажьте яйцом и выпекайте при 200 °C восемнадцать минут."
+        }
+      ],
+      "difficulty": "hard",
+      "isActive": true,
+      "shopabilityScore": 14
+    },
+    {
+      "id": "unitools:frikadeller",
+      "slug": "frikadeller",
+      "title": "Датские мясные котлеты",
+      "description": "Датские мясные биточки, плоские, а не круглые, жаренные на сливочном масле до тёмной корочки.",
+      "categoryId": "mains",
+      "tags": [
+        "meat",
+        "family"
+      ],
+      "cookingTime": 45,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/frikadeller.jpg",
+      "imageAttribution": "Nillerdk · CC BY 3.0",
+      "ingredients": [
+        {
+          "ingredientId": "pork-mince",
+          "name": "Свиной фарш",
+          "quantity": 400,
+          "unit": "g",
+          "categoryId": "meat",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "ingredient-nu8ozc",
+          "name": "Телячий фарш",
+          "quantity": 200,
+          "unit": "g",
+          "weightGrams": 200
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйцо",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 3,
+          "unit": "tbsp",
+          "categoryId": "baking"
+        },
+        {
+          "ingredientId": "milk",
+          "name": "Молоко",
+          "quantity": 150,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "ingredient-165v6ob",
+          "name": "Душистый перец молотый",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 60,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 60
+        },
+        {
+          "ingredientId": "ingredient-4syu73",
+          "name": "Отварной картофель",
+          "quantity": 800,
+          "unit": "g",
+          "weightGrams": 800
+        },
+        {
+          "ingredientId": "ingredient-1dy2hk7",
+          "name": "Красная капуста",
+          "quantity": 0,
+          "unit": "toTaste",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "frikadeller",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 620,
+        "protein": 36,
+        "fat": 34,
+        "carbs": 42,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Смешайте оба фарша с тёртым луком, яйцом, мукой, солью, перцем и душистым перцем."
+        },
+        {
+          "text": "Вымешивайте пять минут, подливая молоко порциями. Масса должна стать вязкой и тянуться за ложкой."
+        },
+        {
+          "text": "Уберите в холодильник на полчаса — холодный фарс держит форму лучше."
+        },
+        {
+          "text": "Растопите масло на среднем огне. Столовой ложкой, смоченной в воде, набирайте фарш и выкладывайте на сковороду, приплющивая."
+        },
+        {
+          "text": "Жарьте по шесть минут с каждой стороны до тёмно-коричневой корочки. Не торопитесь — цвет и есть вкус."
+        },
+        {
+          "text": "Подавайте с отварным картофелем, маринованной красной капустой и подливой из сковороды."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 60
+    },
+    {
+      "id": "unitools:karjalanpiirakka",
+      "slug": "karjalanpiirakka",
+      "title": "Карельские пирожки",
+      "description": "Ржаная корзиночка с рисовой кашей, смазанная маслом после выпечки и поданная с яичным маслом.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 85,
+      "servings": 8,
+      "image": "https://theunitools.com/recipes/karjalanpiirakka.jpg",
+      "imageAttribution": "Ralf Roletschek · GFDL 1.2",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-i88vy0",
+          "name": "Ржаная мука",
+          "quantity": 250,
+          "unit": "g",
+          "weightGrams": 250
+        },
+        {
+          "ingredientId": "water",
+          "name": "Вода",
+          "quantity": 150,
+          "unit": "ml",
+          "categoryId": "pantry"
+        },
+        {
+          "ingredientId": "ingredient-1e8ekc1",
+          "name": "Круглый рис",
+          "quantity": 150,
+          "unit": "g",
+          "weightGrams": 150
+        },
+        {
+          "ingredientId": "milk",
+          "name": "Молоко",
+          "quantity": 700,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 100,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 100
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйца",
+          "quantity": 3,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "karjalanpiirakka",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 240,
+        "protein": 6,
+        "fat": 10,
+        "carbs": 32,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Сварите рис в молоке на слабом огне сорок минут до состояния жидковатой каши. Посолите и остудите."
+        },
+        {
+          "text": "Замесите тесто из ржаной муки, воды и соли, вымешивайте пять минут. Оно будет плотным и не липким."
+        },
+        {
+          "text": "Разделите на шестнадцать шариков и раскатайте каждый в овал толщиной в полмиллиметра. Подпыляйте ржаной мукой, а не пшеничной."
+        },
+        {
+          "text": "Выложите ложку каши по центру, оставив свободными края, и защипните края гофрировкой, оставив начинку открытой."
+        },
+        {
+          "text": "Выпекайте при 250 °C пятнадцать минут — коротко и очень горячо, иначе тонкое тесто высохнет."
+        },
+        {
+          "text": "Растопите половину масла с равным количеством горячей воды и окуните горячие пирожки. Накройте полотенцем на десять минут."
+        },
+        {
+          "text": "Разомните варёные яйца с оставшимся мягким маслом и солью — это мунавой, яичное масло. Подавайте им пирожки."
+        }
+      ],
+      "difficulty": "hard",
+      "isActive": true,
+      "shopabilityScore": 60
+    },
+    {
+      "id": "unitools:soda-bread",
+      "slug": "soda-bread",
+      "title": "Содовый хлеб",
+      "description": "Хлеб на соде и пахте без дрожжей и без расстойки. От замеса до духовки — три минуты.",
+      "categoryId": "baking",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 55,
+      "servings": 8,
+      "image": "https://theunitools.com/recipes/soda-bread.jpg",
+      "imageAttribution": "Jim Lukach · CC BY 2.0",
+      "ingredients": [
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 350,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 350
+        },
+        {
+          "ingredientId": "ingredient-1qzfp1t",
+          "name": "Цельнозерновая мука",
+          "quantity": 150,
+          "unit": "g",
+          "weightGrams": 150
+        },
+        {
+          "ingredientId": "ingredient-1qtf28n",
+          "name": "Пахта",
+          "quantity": 400,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "ingredient-q2ndya",
+          "name": "Сода",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 1,
+          "unit": "tsp",
+          "categoryId": "spices"
+        },
+        {
+          "ingredientId": "oats",
+          "name": "Овсяные хлопья",
+          "quantity": 2,
+          "unit": "tbsp",
+          "categoryId": "grains"
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "soda-bread",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 260,
+        "protein": 9,
+        "fat": 2,
+        "carbs": 52,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Разогрейте духовку до 220 °C заранее. Хлеб должен отправиться в неё сразу после замеса, ждать он не может."
+        },
+        {
+          "text": "Смешайте обе муки, соду и соль в миске и хорошо перемешайте, чтобы сода разошлась равномерно."
+        },
+        {
+          "text": "Влейте пахту и перемешайте ножом или рукой ровно до соединения. Тесто будет липким и неровным — так и надо."
+        },
+        {
+          "text": "Выложите на присыпанный мукой противень, придайте форму круглой буханки и прорежьте глубокий крест почти до дна."
+        },
+        {
+          "text": "Посыпьте овсяными хлопьями и выпекайте пятнадцать минут при 220 °C, затем тридцать при 190 °C."
+        },
+        {
+          "text": "Готовый хлеб звучит глухо, если постучать по дну. Остудите на решётке минимум час: горячий содовый хлеб не режется."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 40
+    },
+    {
+      "id": "unitools:cepelinai",
+      "slug": "cepelinai",
+      "title": "Цеппелинай",
+      "description": "Крупные картофельные клёцки с мясной начинкой, названные в честь дирижаблей. Со шкварками и сметаной.",
+      "categoryId": "mains",
+      "tags": [
+        "meat",
+        "family"
+      ],
+      "cookingTime": 100,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/cepelinai.jpg",
+      "imageAttribution": "Diliff · CC BY-SA 3.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-1n0mygw",
+          "name": "Картофель сырой",
+          "quantity": 1.5,
+          "unit": "kg",
+          "weightGrams": 1500
+        },
+        {
+          "ingredientId": "ingredient-1vo2p0x",
+          "name": "Картофель варёный",
+          "quantity": 500,
+          "unit": "g",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "pork-mince",
+          "name": "Свиной фарш",
+          "quantity": 500,
+          "unit": "g",
+          "categoryId": "meat",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "ingredient-khqie0",
+          "name": "Копчёное сало",
+          "quantity": 200,
+          "unit": "g",
+          "weightGrams": 200
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 200,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "ingredient-x54sxq",
+          "name": "Картофельный крахмал",
+          "quantity": 2,
+          "unit": "tbsp"
+        },
+        {
+          "ingredientId": "ingredient-25xjfh",
+          "name": "Майоран",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "cepelinai",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 720,
+        "protein": 28,
+        "fat": 38,
+        "carbs": 68,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Натрите сырой картофель на мелкой тёрке и отожмите через полотенце. Жидкость соберите в миску."
+        },
+        {
+          "text": "Дайте жидкости постоять десять минут, слейте воду, а осевший крахмал вмешайте обратно в тёртую массу."
+        },
+        {
+          "text": "Разомните варёный картофель и соедините с тёртым, добавив крахмал и соль. Масса должна лепиться и не липнуть."
+        },
+        {
+          "text": "Смешайте фарш с половиной мелко нарезанного лука, майораном, солью и перцем и слепите четыре плотных шарика."
+        },
+        {
+          "text": "Возьмите мокрыми руками ком теста, расплющите на ладони, положите начинку и залепите в удлинённый овал."
+        },
+        {
+          "text": "Опустите в едва кипящую подсоленную воду и варите двадцать пять минут. Не мешайте — только качните кастрюлю в первую минуту."
+        },
+        {
+          "text": "Вытопите сало с оставшимся луком до шкварок, полейте цеппелинай и подайте со сметаной."
+        }
+      ],
+      "difficulty": "hard",
+      "isActive": true,
+      "shopabilityScore": 38
+    },
+    {
+      "id": "unitools:saltibarsciai",
+      "slug": "saltibarsciai",
+      "title": "Литовский холодник",
+      "description": "Холодный свекольный суп на кефире, ярко-розовый, с огурцом, укропом и варёной картошкой отдельно.",
+      "categoryId": "soups",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 60,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/saltibarsciai.jpg",
+      "imageAttribution": "User:TreasuryTag · CC BY-SA 3.0",
+      "ingredients": [
+        {
+          "ingredientId": "beet",
+          "name": "Свёкла",
+          "quantity": 500,
+          "unit": "g",
+          "categoryId": "vegetables",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "ingredient-17byb0c",
+          "name": "Кефир",
+          "quantity": 1,
+          "unit": "l"
+        },
+        {
+          "ingredientId": "cucumber",
+          "name": "Огурцы",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйца",
+          "quantity": 4,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "dill",
+          "name": "Укроп",
+          "quantity": 40,
+          "unit": "g",
+          "categoryId": "herbs",
+          "weightGrams": 40
+        },
+        {
+          "ingredientId": "ingredient-9kc5ns",
+          "name": "Зелёный лук",
+          "quantity": 40,
+          "unit": "g",
+          "weightGrams": 40
+        },
+        {
+          "ingredientId": "potato",
+          "name": "Картофель",
+          "quantity": 800,
+          "unit": "g",
+          "categoryId": "vegetables",
+          "weightGrams": 800
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 150,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "saltibarsciai",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 320,
+        "protein": 14,
+        "fat": 12,
+        "carbs": 40,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Отварите свёклу до мягкости, остудите полностью и натрите на крупной тёрке."
+        },
+        {
+          "text": "Нарежьте огурцы соломкой, порубите укроп и зелёный лук."
+        },
+        {
+          "text": "Смешайте свёклу, огурцы и зелень со сметаной и посолите — до кефира, чтобы соль разошлась."
+        },
+        {
+          "text": "Влейте холодный кефир и размешайте. Суп станет ровного розового цвета."
+        },
+        {
+          "text": "Уберите в холодильник на час. Тёплый шалтибарщяй не имеет смысла."
+        },
+        {
+          "text": "Отварите картофель и подайте горячим на отдельной тарелке. В суп положите половинки яиц."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 75
+    },
+    {
+      "id": "unitools:draniki",
+      "slug": "draniki",
+      "title": "Драники",
+      "description": "Картофельные оладьи из тёртого сырого картофеля, жаренные до хрустящей корки, со сметаной.",
+      "categoryId": "mains",
+      "tags": [
+        "family",
+        "budget",
+        "belarusian"
+      ],
+      "cookingTime": 45,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/draniki.jpg",
+      "imageAttribution": "Photo made by Daniel Spils and uploaded to flickr.com · CC BY-SA 2.0",
+      "ingredients": [
+        {
+          "ingredientId": "potato",
+          "name": "Картофель",
+          "quantity": 1,
+          "unit": "kg",
+          "categoryId": "vegetables",
+          "weightGrams": 1000
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "oil",
+          "name": "Растительное масло",
+          "quantity": 100,
+          "unit": "ml",
+          "categoryId": "oils"
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 200,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "dill",
+          "name": "Укроп",
+          "quantity": 20,
+          "unit": "g",
+          "categoryId": "herbs",
+          "weightGrams": 20
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "draniki",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 390,
+        "protein": 8,
+        "fat": 22,
+        "carbs": 42,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Натрите картофель и лук на мелкой тёрке в одну миску."
+        },
+        {
+          "text": "Дайте массе постоять три минуты и слейте отстоявшуюся сверху воду, не трогая осадок."
+        },
+        {
+          "text": "Посолите и поперчите. Ничего больше не добавляйте."
+        },
+        {
+          "text": "Разогрейте масло на среднем огне и выкладывайте массу столовой ложкой, приплющивая до толщины в полсантиметра."
+        },
+        {
+          "text": "Жарьте по три-четыре минуты с каждой стороны до тёмно-золотой хрустящей корки."
+        },
+        {
+          "text": "Выложите на бумагу и подавайте немедленно со сметаной и укропом."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 100
+    },
+    {
+      "id": "unitools:machanka",
+      "slug": "machanka",
+      "title": "Мачанка",
+      "description": "Густая подлива из свинины и колбасы на сметане, в которую макают блины. Отсюда и название.",
+      "categoryId": "mains",
+      "tags": [
+        "family",
+        "belarusian"
+      ],
+      "cookingTime": 75,
+      "servings": 4,
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-e2ikgs",
+          "name": "Свиная шея",
+          "quantity": 500,
+          "unit": "g",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "ingredient-10ln10t",
+          "name": "Копчёная колбаса",
+          "quantity": 250,
+          "unit": "g",
+          "weightGrams": 250
+        },
+        {
+          "ingredientId": "ingredient-136t2d0",
+          "name": "Копчёные рёбрышки",
+          "quantity": 250,
+          "unit": "g",
+          "weightGrams": 250
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 300,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 2,
+          "unit": "tbsp",
+          "categoryId": "baking"
+        },
+        {
+          "ingredientId": "bay",
+          "name": "Лавровый лист",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "spices"
+        },
+        {
+          "ingredientId": "ingredient-1r5di83",
+          "name": "Мука для блинов",
+          "quantity": 250,
+          "unit": "g",
+          "weightGrams": 250
+        },
+        {
+          "ingredientId": "milk",
+          "name": "Молоко",
+          "quantity": 500,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйца",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "machanka",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 780,
+        "protein": 34,
+        "fat": 46,
+        "carbs": 54,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Обжарьте свинину до румяной корки, добавьте лук и жарьте до мягкости."
+        },
+        {
+          "text": "Добавьте нарезанные колбасу и рёбрышки, влейте стакан воды, положите лавровый лист и тушите двадцать пять минут."
+        },
+        {
+          "text": "Размешайте муку со сметаной до однородности и влейте в кастрюлю, помешивая."
+        },
+        {
+          "text": "Томите десять минут на слабом огне, пока подлива не загустеет до консистенции жидкой сметаны."
+        },
+        {
+          "text": "Замесите блинное тесто из муки, молока, яиц и соли и дайте постоять пятнадцать минут."
+        },
+        {
+          "text": "Испеките тонкие пресные блины на сухой сковороде."
+        },
+        {
+          "text": "Подайте мачанку в глубокой миске, блины стопкой рядом. Макают, отрывая по куску."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 56
+    },
+    {
+      "id": "unitools:pelmeni",
+      "slug": "pelmeni",
+      "title": "Пельмени",
+      "description": "Мелкие пельмени из пресного теста с рубленым мясом и луком, сваренные в бульоне.",
+      "categoryId": "mains",
+      "tags": [
+        "meat",
+        "family"
+      ],
+      "cookingTime": 105,
+      "servings": 6,
+      "image": "https://theunitools.com/recipes/pelmeni.jpg",
+      "imageAttribution": "Eugene Kim @ Flickr · CC BY 2.0",
+      "ingredients": [
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 600,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 600
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйца",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "ingredient-15mp4mk",
+          "name": "Вода ледяная",
+          "quantity": 220,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "beef",
+          "name": "Говядина",
+          "quantity": 400,
+          "unit": "g",
+          "categoryId": "meat",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "pork",
+          "name": "Свинина",
+          "quantity": 400,
+          "unit": "g",
+          "categoryId": "meat",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "ingredient-xehfl2",
+          "name": "Лёд колотый",
+          "quantity": 50,
+          "unit": "g",
+          "weightGrams": 50
+        },
+        {
+          "ingredientId": "bay",
+          "name": "Лавровый лист",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "spices"
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 60,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 60
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 200,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "vinegar",
+          "name": "Уксус",
+          "quantity": 30,
+          "unit": "ml",
+          "categoryId": "spices"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "pelmeni",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 680,
+        "protein": 34,
+        "fat": 32,
+        "carbs": 62,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Замесите крутое тесто из муки, яиц, ледяной воды и соли и вымешивайте пятнадцать минут."
+        },
+        {
+          "text": "Заверните в плёнку и уберите в холодильник на сорок минут."
+        },
+        {
+          "text": "Порубите мясо ножом или пропустите через крупную решётку, смешайте с тёртым луком, солью и перцем."
+        },
+        {
+          "text": "Вмешайте колотый лёд в фарш и уберите его в холод на двадцать минут."
+        },
+        {
+          "text": "Раскатайте тесто в пласт толщиной в миллиметр и вырежьте кружки диаметром шесть сантиметров."
+        },
+        {
+          "text": "На каждый кружок положите чайную ложку фарша, сложите полумесяцем, защипните и соедините концы кольцом."
+        },
+        {
+          "text": "Варите в кипящем подсоленном бульоне с лавровым листом четыре минуты после всплытия, подавайте с маслом и сметаной."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 78
+    },
+    {
+      "id": "unitools:beef-stroganoff",
+      "slug": "beef-stroganoff",
+      "title": "Бефстроганов",
+      "description": "Говядина, нарезанная соломкой и обжаренная на сильном огне, в сметанном соусе с луком.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 45,
+      "servings": 4,
+      "image": "https://theunitools.com/recipes/beef-stroganoff.jpg",
+      "imageAttribution": "jimmyweee · CC BY 2.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-17xvc65",
+          "name": "Говяжья вырезка",
+          "quantity": 700,
+          "unit": "g",
+          "weightGrams": 700
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "mushroom",
+          "name": "Шампиньоны",
+          "quantity": 300,
+          "unit": "g",
+          "categoryId": "vegetables",
+          "weightGrams": 300
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 300,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "ingredient-sxmbyt",
+          "name": "Горчица",
+          "quantity": 1,
+          "unit": "tbsp"
+        },
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 2,
+          "unit": "tbsp",
+          "categoryId": "baking"
+        },
+        {
+          "ingredientId": "ingredient-r9kpbu",
+          "name": "Говяжий бульон",
+          "quantity": 200,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 60,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 60
+        },
+        {
+          "ingredientId": "oil",
+          "name": "Растительное масло",
+          "quantity": 30,
+          "unit": "ml",
+          "categoryId": "oils"
+        },
+        {
+          "ingredientId": "parsley",
+          "name": "Петрушка",
+          "quantity": 20,
+          "unit": "g",
+          "categoryId": "herbs",
+          "weightGrams": 20
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "beef-stroganoff",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 620,
+        "protein": 44,
+        "fat": 42,
+        "carbs": 14,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Нарежьте мясо поперёк волокон соломкой толщиной в сантиметр, обсушите бумагой и поперчите."
+        },
+        {
+          "text": "Раскалите сковороду и обжарьте мясо порциями по полторы минуты, не переворачивая часто."
+        },
+        {
+          "text": "Выньте мясо, обжарьте грибы на сильном огне до испарения их воды."
+        },
+        {
+          "text": "Добавьте масло и лук и жарьте до мягкости и золотистого цвета."
+        },
+        {
+          "text": "Всыпьте муку, прогрейте минуту и влейте бульон, размешивая до гладкости."
+        },
+        {
+          "text": "Снимите с огня, вмешайте сметану и горчицу и посолите."
+        },
+        {
+          "text": "Верните мясо с выделившимся соком, прогрейте минуту не кипятя и посыпьте петрушкой."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 67
+    },
+    {
+      "id": "unitools:bigos",
+      "slug": "bigos",
+      "title": "Бигос с мясом и капустой",
+      "description": "Квашеная и свежая капуста, тушённые с несколькими видами мяса и сухофруктами трое суток.",
+      "categoryId": "mains",
+      "tags": [
+        "meat",
+        "family"
+      ],
+      "cookingTime": 280,
+      "servings": 10,
+      "image": "https://theunitools.com/recipes/bigos.jpg",
+      "imageAttribution": "Dr. Bernd Gross · CC BY-SA 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-1jfdv43",
+          "name": "Квашеная капуста",
+          "quantity": 1,
+          "unit": "kg",
+          "weightGrams": 1000
+        },
+        {
+          "ingredientId": "ingredient-15dp17v",
+          "name": "Капуста свежая",
+          "quantity": 1,
+          "unit": "kg",
+          "weightGrams": 1000
+        },
+        {
+          "ingredientId": "ingredient-16rm83i",
+          "name": "Свиная лопатка",
+          "quantity": 600,
+          "unit": "g",
+          "weightGrams": 600
+        },
+        {
+          "ingredientId": "ingredient-10xy21r",
+          "name": "Колбаса копчёная",
+          "quantity": 400,
+          "unit": "g",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "ingredient-1aew0gt",
+          "name": "Копчёная грудинка",
+          "quantity": 300,
+          "unit": "g",
+          "weightGrams": 300
+        },
+        {
+          "ingredientId": "beef",
+          "name": "Говядина",
+          "quantity": 400,
+          "unit": "g",
+          "categoryId": "meat",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "ingredient-1b4z7kv",
+          "name": "Сушёные белые грибы",
+          "quantity": 50,
+          "unit": "g",
+          "weightGrams": 50
+        },
+        {
+          "ingredientId": "ingredient-ozyl7e",
+          "name": "Чернослив",
+          "quantity": 150,
+          "unit": "g",
+          "weightGrams": 150
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 3,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "tomato-paste",
+          "name": "Томатная паста",
+          "quantity": 3,
+          "unit": "tbsp",
+          "categoryId": "preserves"
+        },
+        {
+          "ingredientId": "ingredient-1nusx49",
+          "name": "Красное сухое вино",
+          "quantity": 250,
+          "unit": "ml"
+        },
+        {
+          "ingredientId": "ingredient-qu31nd",
+          "name": "Можжевельник",
+          "quantity": 8,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "bay",
+          "name": "Лавровый лист",
+          "quantity": 4,
+          "unit": "piece",
+          "categoryId": "spices"
+        },
+        {
+          "ingredientId": "ingredient-1auqa48",
+          "name": "Душистый перец",
+          "quantity": 6,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "oil",
+          "name": "Растительное масло",
+          "quantity": 60,
+          "unit": "ml",
+          "categoryId": "oils"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "bigos",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 620,
+        "protein": 38,
+        "fat": 40,
+        "carbs": 24,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Замочите сушёные грибы в стакане тёплой воды на полчаса и нарежьте, воду процедите и сохраните."
+        },
+        {
+          "text": "Отожмите квашеную капусту, нашинкуйте свежую и потушите обе в отдельных кастрюлях по тридцать минут."
+        },
+        {
+          "text": "Обжарьте грудинку до шкварок, в её жире подрумяньте свинину и говядину кусками, затем лук."
+        },
+        {
+          "text": "Соедините обе капусты, мясо, колбасу, грибы с их водой, чернослив, томатную пасту и специи в большой кастрюле."
+        },
+        {
+          "text": "Влейте вино, доведите до кипения и тушите два часа на самом слабом огне, помешивая изредка."
+        },
+        {
+          "text": "Полностью остудите и оставьте на сутки в холоде, потом снова доведите до кипения и тушите час."
+        },
+        {
+          "text": "Повторите цикл ещё раз на третий день. Подавайте с ржаным хлебом и рюмкой водки."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 23
+    },
+    {
+      "id": "unitools:sernik",
+      "slug": "sernik",
+      "title": "Сырник польский",
+      "description": "Плотный творожный пирог на песочной основе, из твёрдого творога, а не из сливочного сыра.",
+      "categoryId": "breakfast",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 115,
+      "servings": 12,
+      "image": "https://theunitools.com/recipes/sernik.jpg",
+      "imageAttribution": "Jacek Halicki · CC BY-SA 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-msoqx7",
+          "name": "Творог твёрдый",
+          "quantity": 1,
+          "unit": "kg",
+          "weightGrams": 1000
+        },
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 250,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 250
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 200,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 200
+        },
+        {
+          "ingredientId": "sugar",
+          "name": "Сахар",
+          "quantity": 250,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 250
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйца",
+          "quantity": 6,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "ingredient-x54sxq",
+          "name": "Картофельный крахмал",
+          "quantity": 50,
+          "unit": "g",
+          "weightGrams": 50
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 150,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "ingredient-18ti4st",
+          "name": "Ваниль",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-1chmk98",
+          "name": "Цедра лимона",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-b03vci",
+          "name": "Изюм",
+          "quantity": 80,
+          "unit": "g",
+          "weightGrams": 80
+        },
+        {
+          "ingredientId": "ingredient-11oo7iz",
+          "name": "Разрыхлитель",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 1,
+          "unit": "pinch",
+          "categoryId": "spices"
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "sernik",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 480,
+        "protein": 18,
+        "fat": 26,
+        "carbs": 44,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Разотрите муку со ста граммами холодного масла, ложкой сахара, желтком и разрыхлителем в крошку и замесите тесто."
+        },
+        {
+          "text": "Утрамбуйте тесто в форму и запеките при 180 °C пятнадцать минут до бледно-золотого цвета."
+        },
+        {
+          "text": "Протрите творог через сито дважды — от этого зависит вся гладкость начинки."
+        },
+        {
+          "text": "Взбейте оставшееся масло с сахаром добела, введите желтки по одному, затем творог, сметану, крахмал, ваниль и цедру."
+        },
+        {
+          "text": "Взбейте белки с щепотью соли до устойчивых пиков и вмешайте лопаткой в три приёма."
+        },
+        {
+          "text": "Вмешайте изюм, вылейте начинку на основу и разровняйте."
+        },
+        {
+          "text": "Пеките при 160 °C пятьдесят пять минут, затем выключите духовку и оставьте пирог внутри с приоткрытой дверцей на час."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 45
+    },
+    {
+      "id": "unitools:kulajda",
+      "slug": "kulajda",
+      "title": "Грибной суп со сметаной",
+      "description": "Сливочный грибной суп с укропом, картофелем и яйцом-пашот, подкислённый уксусом.",
+      "categoryId": "soups",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 55,
+      "servings": 5,
+      "image": "https://theunitools.com/recipes/kulajda.jpg",
+      "imageAttribution": "Radek Schenk · CC BY-SA 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-br7n06",
+          "name": "Лесные грибы",
+          "quantity": 400,
+          "unit": "g",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "potato",
+          "name": "Картофель",
+          "quantity": 600,
+          "unit": "g",
+          "categoryId": "vegetables",
+          "weightGrams": 600
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 300,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 2,
+          "unit": "tbsp",
+          "categoryId": "baking"
+        },
+        {
+          "ingredientId": "dill",
+          "name": "Укроп",
+          "quantity": 50,
+          "unit": "g",
+          "categoryId": "herbs",
+          "weightGrams": 50
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйца",
+          "quantity": 5,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "vinegar",
+          "name": "Уксус",
+          "quantity": 3,
+          "unit": "tbsp",
+          "categoryId": "spices"
+        },
+        {
+          "ingredientId": "ingredient-1kqbsng",
+          "name": "Тмин",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "bay",
+          "name": "Лавровый лист",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "spices"
+        },
+        {
+          "ingredientId": "sugar",
+          "name": "Сахар",
+          "quantity": 1,
+          "unit": "tsp",
+          "categoryId": "baking"
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 40,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 40
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "kulajda",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 420,
+        "protein": 14,
+        "fat": 26,
+        "carbs": 34,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Отварите нарезанный картофель в полутора литрах воды с тмином и лавровым листом пятнадцать минут."
+        },
+        {
+          "text": "Обжарьте нарезанные грибы в масле до испарения их воды и добавьте в кастрюлю."
+        },
+        {
+          "text": "Проварите вместе десять минут, чтобы грибы отдали вкус бульону."
+        },
+        {
+          "text": "Размешайте сметану с мукой до однородности без комков."
+        },
+        {
+          "text": "Снимите суп с огня, вмешайте сметанную смесь, верните на слабый огонь и прогрейте пять минут не кипятя."
+        },
+        {
+          "text": "Добавьте уксус, сахар, соль, перец и почти весь укроп и попробуйте на баланс кислого и сливочного."
+        },
+        {
+          "text": "Сварите яйца-пашот в подкисленной воде и опустите по одному в каждую тарелку, посыпав оставшимся укропом."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 78
+    },
+    {
+      "id": "unitools:appelkaka",
+      "slug": "appelkaka",
+      "title": "Шведский яблочный пирог",
+      "description": "Яблочный пирог с корицей под хрустящей масляной крошкой, к ванильному соусу.",
+      "categoryId": "baking",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 75,
+      "servings": 8,
+      "image": "https://theunitools.com/recipes/appelkaka.jpg",
+      "imageAttribution": "b:sv:Marsve (talk | contribs) · CC BY-SA 3.0",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-1lw7bad",
+          "name": "Яблоки кислых сортов",
+          "quantity": 1,
+          "unit": "kg",
+          "weightGrams": 1000
+        },
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 200,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 200
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 150,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 150
+        },
+        {
+          "ingredientId": "sugar",
+          "name": "Сахар",
+          "quantity": 150,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 150
+        },
+        {
+          "ingredientId": "ingredient-dzmv4n",
+          "name": "Корица",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "oats",
+          "name": "Овсяные хлопья",
+          "quantity": 80,
+          "unit": "g",
+          "categoryId": "grains",
+          "weightGrams": 80
+        },
+        {
+          "ingredientId": "milk",
+          "name": "Молоко",
+          "quantity": 300,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "cream",
+          "name": "Сливки",
+          "quantity": 200,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "ingredient-14delxz",
+          "name": "Желтки",
+          "quantity": 4,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-18ti4st",
+          "name": "Ваниль",
+          "quantity": 1,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "ingredient-og1qle",
+          "name": "Кукурузный крахмал",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 1,
+          "unit": "pinch",
+          "categoryId": "spices"
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "appelkaka",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 520,
+        "protein": 7,
+        "fat": 28,
+        "carbs": 62,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Очистите яблоки, нарежьте толстыми дольками и разложите в смазанной форме."
+        },
+        {
+          "text": "Посыпьте яблоки половиной сахара и корицей и слегка перемешайте прямо в форме."
+        },
+        {
+          "text": "Разотрите холодное масло с мукой, оставшимся сахаром и солью кончиками пальцев в крупную крошку."
+        },
+        {
+          "text": "Вмешайте овсяные хлопья и распределите крошку по яблокам, не приминая её."
+        },
+        {
+          "text": "Пеките при 190 °C сорок минут, пока верх не станет золотистым, а сок не начнёт булькать по краям."
+        },
+        {
+          "text": "Прогрейте молоко со сливками и стручком ванили, не доводя до кипения."
+        },
+        {
+          "text": "Взбейте желтки с крахмалом, вводите горячее молоко тонкой струйкой и варите соус до густоты, помешивая."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 55
+    },
+    {
+      "id": "unitools:erwtensoep",
+      "slug": "erwtensoep",
+      "title": "Гороховый суп",
+      "description": "Густой гороховый суп с копчёной колбасой, такой плотный, что ложка в нём стоит.",
+      "categoryId": "soups",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 175,
+      "servings": 6,
+      "image": "https://theunitools.com/recipes/erwtensoep.jpg",
+      "imageAttribution": " · Public domain",
+      "ingredients": [
+        {
+          "ingredientId": "ingredient-2cttrg",
+          "name": "Горох колотый",
+          "quantity": 500,
+          "unit": "g",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "ingredient-xpyfgc",
+          "name": "Свиные рёбрышки",
+          "quantity": 500,
+          "unit": "g",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "ingredient-1vity45",
+          "name": "Свиная грудинка",
+          "quantity": 300,
+          "unit": "g",
+          "weightGrams": 300
+        },
+        {
+          "ingredientId": "ingredient-1ce494j",
+          "name": "Копчёная колбаса рукворст",
+          "quantity": 400,
+          "unit": "g",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "ingredient-ep7li1",
+          "name": "Корень сельдерея",
+          "quantity": 300,
+          "unit": "g",
+          "weightGrams": 300
+        },
+        {
+          "ingredientId": "ingredient-1p1b252",
+          "name": "Лук-порей",
+          "quantity": 2,
+          "unit": "piece"
+        },
+        {
+          "ingredientId": "carrot",
+          "name": "Морковь",
+          "quantity": 3,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "potato",
+          "name": "Картофель",
+          "quantity": 400,
+          "unit": "g",
+          "categoryId": "vegetables",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "ingredient-o9focu",
+          "name": "Листья сельдерея",
+          "quantity": 30,
+          "unit": "g",
+          "weightGrams": 30
+        },
+        {
+          "ingredientId": "ingredient-dv048d",
+          "name": "Ржаной хлеб",
+          "quantity": 300,
+          "unit": "g",
+          "weightGrams": 300
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "erwtensoep",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 680,
+        "protein": 40,
+        "fat": 32,
+        "carbs": 58,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Промойте горох и залейте вместе с рёбрышками и грудинкой двумя с половиной литрами холодной воды."
+        },
+        {
+          "text": "Доведите до кипения, снимите пену и варите на слабом огне час, пока горох не начнёт распадаться."
+        },
+        {
+          "text": "Добавьте картофель, морковь, сельдерей и лук и варите ещё час, помешивая, чтобы не пригорело."
+        },
+        {
+          "text": "Выньте мясо, снимите с костей и верните в суп кусками."
+        },
+        {
+          "text": "Добавьте нарезанный порей и листья сельдерея и проварите двадцать минут."
+        },
+        {
+          "text": "Полностью остудите и оставьте на ночь в холодильнике — суп загустеет."
+        },
+        {
+          "text": "Разогрейте, положите нарезанную колбасу на пять минут и подавайте с ржаным хлебом."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 27
+    },
+    {
+      "id": "unitools:belgian-waffles",
+      "slug": "belgian-waffles",
+      "title": "Льежские вафли",
+      "description": "Плотные дрожжевые вафли из густого теста с жемчужным сахаром, карамелизующимся снаружи.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 125,
+      "servings": 10,
+      "image": "https://theunitools.com/recipes/belgian-waffles.jpg",
+      "imageAttribution": "No machine-readable author provided. Jrenier assumed (based on copyright claims). · Public domain",
+      "ingredients": [
+        {
+          "ingredientId": "flour",
+          "name": "Мука",
+          "quantity": 500,
+          "unit": "g",
+          "categoryId": "baking",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "milk",
+          "name": "Молоко",
+          "quantity": 180,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "ingredient-1yccmuv",
+          "name": "Сухие дрожжи",
+          "quantity": 10,
+          "unit": "g",
+          "weightGrams": 10
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 250,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 250
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйца",
+          "quantity": 2,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "ingredient-1qf6pyu",
+          "name": "Коричневый сахар",
+          "quantity": 60,
+          "unit": "g",
+          "weightGrams": 60
+        },
+        {
+          "ingredientId": "ingredient-dwu33r",
+          "name": "Жемчужный сахар",
+          "quantity": 250,
+          "unit": "g",
+          "weightGrams": 250
+        },
+        {
+          "ingredientId": "ingredient-18ti4st",
+          "name": "Ваниль",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "ingredient-dzmv4n",
+          "name": "Корица",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 1,
+          "unit": "tsp",
+          "categoryId": "spices"
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "belgian-waffles",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 480,
+        "protein": 7,
+        "fat": 24,
+        "carbs": 60,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Растворите дрожжи в тёплом молоке и оставьте на десять минут до появления пены."
+        },
+        {
+          "text": "Замесите тесто из муки, опары, яиц, коричневого сахара, ванили, корицы и соли."
+        },
+        {
+          "text": "Вводите мягкое масло по частям, вымешивая, пока тесто не станет гладким и эластичным."
+        },
+        {
+          "text": "Дайте подойти в тепле полтора часа до удвоения."
+        },
+        {
+          "text": "Вмешайте жемчужный сахар руками, распределив его равномерно, но не вымешивая долго."
+        },
+        {
+          "text": "Разделите тесто на десять комков и дайте им постоять пятнадцать минут."
+        },
+        {
+          "text": "Выпекайте в вафельнице по три минуты до тёмно-золотого цвета с карамельной корочкой."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 44
+    },
+    {
+      "id": "unitools:kugelis",
+      "slug": "kugelis",
+      "title": "Картофельная запеканка",
+      "description": "Картофельная запеканка из тёртого сырого картофеля с беконом и луком, со сметаной.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 130,
+      "servings": 8,
+      "image": "https://theunitools.com/recipes/kugelis.jpg",
+      "imageAttribution": "Eden, Janine and Jim · CC BY 2.0",
+      "ingredients": [
+        {
+          "ingredientId": "potato",
+          "name": "Картофель",
+          "quantity": 2,
+          "unit": "kg",
+          "categoryId": "vegetables",
+          "weightGrams": 2000
+        },
+        {
+          "ingredientId": "ingredient-1aew0gt",
+          "name": "Копчёная грудинка",
+          "quantity": 300,
+          "unit": "g",
+          "weightGrams": 300
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 3,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйца",
+          "quantity": 3,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "milk",
+          "name": "Молоко",
+          "quantity": 200,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 300,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "ingredient-25xjfh",
+          "name": "Майоран",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "kugelis",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 480,
+        "protein": 14,
+        "fat": 26,
+        "carbs": 48,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Вытопите грудинку до шкварок, добавьте нарезанный лук и жарьте до золотистого цвета."
+        },
+        {
+          "text": "Натрите картофель на мелкой тёрке и слегка отожмите, собрав жидкость в миску."
+        },
+        {
+          "text": "Дайте жидкости отстояться десять минут, слейте воду и вмешайте осевший крахмал обратно."
+        },
+        {
+          "text": "Влейте горячее молоко и горячий жир с луком и шкварками, размешивая быстро."
+        },
+        {
+          "text": "Вмешайте яйца, соль, перец и майоран до однородной густой массы."
+        },
+        {
+          "text": "Вылейте в смазанную форму слоем в четыре сантиметра и разровняйте."
+        },
+        {
+          "text": "Запекайте при 180 °C полтора часа до тёмно-золотой корки и дайте постоять двадцать минут."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 71
+    },
+    {
+      "id": "unitools:kohuke",
+      "slug": "kohuke",
+      "title": "Кохуке",
+      "description": "Творожный батончик в шоколадной глазури, эстонский десерт из холодильника.",
+      "categoryId": "mains",
+      "tags": [
+        "family"
+      ],
+      "cookingTime": 50,
+      "servings": 12,
+      "image": "https://theunitools.com/recipes/kohuke.jpg",
+      "imageAttribution": "MOs810 · CC BY-SA 4.0",
+      "ingredients": [
+        {
+          "ingredientId": "curd",
+          "name": "Творог",
+          "quantity": 600,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 600
+        },
+        {
+          "ingredientId": "butter",
+          "name": "Сливочное масло",
+          "quantity": 100,
+          "unit": "g",
+          "categoryId": "dairy",
+          "weightGrams": 100
+        },
+        {
+          "ingredientId": "ingredient-ount79",
+          "name": "Сахарная пудра",
+          "quantity": 120,
+          "unit": "g",
+          "weightGrams": 120
+        },
+        {
+          "ingredientId": "ingredient-18ti4st",
+          "name": "Ваниль",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "cream",
+          "name": "Сливки",
+          "quantity": 60,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "ingredient-1n99csk",
+          "name": "Тёмный шоколад",
+          "quantity": 300,
+          "unit": "g",
+          "weightGrams": 300
+        },
+        {
+          "ingredientId": "ingredient-18d7ulz",
+          "name": "Кокосовое масло",
+          "quantity": 30,
+          "unit": "g",
+          "weightGrams": 30
+        },
+        {
+          "ingredientId": "ingredient-b03vci",
+          "name": "Изюм",
+          "quantity": 60,
+          "unit": "g",
+          "weightGrams": 60
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 1,
+          "unit": "pinch",
+          "categoryId": "spices"
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "kohuke",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 320,
+        "protein": 12,
+        "fat": 20,
+        "carbs": 24,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Протрите творог через мелкое сито дважды, чтобы не осталось ни одной крупинки."
+        },
+        {
+          "text": "Взбейте мягкое масло с сахарной пудрой, ванилью и солью до пышности."
+        },
+        {
+          "text": "Соедините творог с масляной смесью и вмешайте сливки до консистенции плотного крема."
+        },
+        {
+          "text": "Вмешайте изюм и сформуйте двенадцать батончиков размером с палец."
+        },
+        {
+          "text": "Разложите батончики на пергаменте и заморозьте на два часа до полной твёрдости."
+        },
+        {
+          "text": "Растопите шоколад с кокосовым маслом на водяной бане до гладкости и остудите до тёплого."
+        },
+        {
+          "text": "Обмакните замороженные батончики на двух вилках, дайте стечь и выложите на пергамент застывать."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 38
+    },
+    {
+      "id": "unitools:kolduny",
+      "slug": "kolduny",
+      "title": "Колдуны",
+      "description": "Картофельные оладьи с мясной начинкой внутри, обжаренные и потушенные в сметане.",
+      "categoryId": "mains",
+      "tags": [
+        "meat",
+        "family",
+        "belarusian"
+      ],
+      "cookingTime": 80,
+      "servings": 5,
+      "ingredients": [
+        {
+          "ingredientId": "potato",
+          "name": "Картофель",
+          "quantity": 1.5,
+          "unit": "kg",
+          "categoryId": "vegetables",
+          "weightGrams": 1500
+        },
+        {
+          "ingredientId": "pork-mince",
+          "name": "Свиной фарш",
+          "quantity": 400,
+          "unit": "g",
+          "categoryId": "meat",
+          "weightGrams": 400
+        },
+        {
+          "ingredientId": "onion",
+          "name": "Лук",
+          "quantity": 3,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйцо",
+          "quantity": 1,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 300,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "ingredient-18uvwns",
+          "name": "Сушёные грибы",
+          "quantity": 30,
+          "unit": "g",
+          "weightGrams": 30
+        },
+        {
+          "ingredientId": "ingredient-25xjfh",
+          "name": "Майоран",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "ingredientId": "oil",
+          "name": "Растительное масло",
+          "quantity": 100,
+          "unit": "ml",
+          "categoryId": "oils"
+        },
+        {
+          "ingredientId": "dill",
+          "name": "Укроп",
+          "quantity": 30,
+          "unit": "g",
+          "categoryId": "herbs",
+          "weightGrams": 30
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        },
+        {
+          "ingredientId": "pepper",
+          "name": "Перец черный",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "kolduny",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 620,
+        "protein": 26,
+        "fat": 38,
+        "carbs": 44,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Замочите сушёные грибы в тёплой воде на двадцать минут и мелко нарежьте."
+        },
+        {
+          "text": "Обжарьте две луковицы с фаршем и грибами, добавьте майоран, соль и перец и полностью остудите."
+        },
+        {
+          "text": "Натрите картофель и оставшийся лук на мелкой тёрке в одну миску."
+        },
+        {
+          "text": "Дайте массе постоять три минуты и слейте отстоявшуюся воду, не трогая осадок."
+        },
+        {
+          "text": "Вмешайте яйцо, посолите и поперчите картофельную массу."
+        },
+        {
+          "text": "Выложите ложку массы на ладонь, положите начинку и накройте второй ложкой массы, залепив края."
+        },
+        {
+          "text": "Обжарьте по три минуты с каждой стороны, переложите в сотейник, залейте сметаной и тушите пятнадцать минут."
+        }
+      ],
+      "difficulty": "medium",
+      "isActive": true,
+      "shopabilityScore": 75
+    },
+    {
+      "id": "unitools:kholodnik",
+      "slug": "kholodnik",
+      "title": "Холодник",
+      "description": "Холодный свекольник на кефире со щавелем, огурцом и яйцом, розовый и очень кислый.",
+      "categoryId": "soups",
+      "tags": [
+        "family",
+        "belarusian"
+      ],
+      "cookingTime": 70,
+      "servings": 5,
+      "ingredients": [
+        {
+          "ingredientId": "beet",
+          "name": "Свёкла",
+          "quantity": 500,
+          "unit": "g",
+          "categoryId": "vegetables",
+          "weightGrams": 500
+        },
+        {
+          "ingredientId": "ingredient-rskcyy",
+          "name": "Щавель",
+          "quantity": 200,
+          "unit": "g",
+          "weightGrams": 200
+        },
+        {
+          "ingredientId": "ingredient-17byb0c",
+          "name": "Кефир",
+          "quantity": 1,
+          "unit": "l"
+        },
+        {
+          "ingredientId": "cucumber",
+          "name": "Огурцы",
+          "quantity": 3,
+          "unit": "piece",
+          "categoryId": "vegetables"
+        },
+        {
+          "ingredientId": "egg",
+          "name": "Яйца",
+          "quantity": 5,
+          "unit": "piece",
+          "categoryId": "eggs"
+        },
+        {
+          "ingredientId": "ingredient-9kc5ns",
+          "name": "Зелёный лук",
+          "quantity": 50,
+          "unit": "g",
+          "weightGrams": 50
+        },
+        {
+          "ingredientId": "dill",
+          "name": "Укроп",
+          "quantity": 40,
+          "unit": "g",
+          "categoryId": "herbs",
+          "weightGrams": 40
+        },
+        {
+          "ingredientId": "sour-cream",
+          "name": "Сметана",
+          "quantity": 200,
+          "unit": "ml",
+          "categoryId": "dairy"
+        },
+        {
+          "ingredientId": "potato",
+          "name": "Картофель",
+          "quantity": 800,
+          "unit": "g",
+          "categoryId": "vegetables",
+          "weightGrams": 800
+        },
+        {
+          "ingredientId": "vinegar",
+          "name": "Уксус",
+          "quantity": 1,
+          "unit": "tbsp",
+          "categoryId": "spices"
+        },
+        {
+          "ingredientId": "salt",
+          "name": "Соль",
+          "quantity": 0,
+          "unit": "toTaste",
+          "categoryId": "spices",
+          "unquantified": true,
+          "optional": true
+        }
+      ],
+      "source": "UniTools",
+      "sourceId": "kholodnik",
+      "sourceUrl": "https://theunitools.com/en/data",
+      "license": "CC BY-SA 4.0",
+      "nutrition": {
+        "calories": 320,
+        "protein": 15,
+        "fat": 12,
+        "carbs": 38,
+        "basis": "serving",
+        "calculationType": "calculated",
+        "source": "UniTools — расчёт по ингредиентам"
+      },
+      "instructions": [
+        {
+          "text": "Отварите свёклу до мягкости с ложкой уксуса, чтобы она сохранила цвет, и полностью остудите."
+        },
+        {
+          "text": "Отварите щавель в небольшом количестве воды пять минут, пока он не потемнеет, и остудите."
+        },
+        {
+          "text": "Натрите остывшую свёклу на крупной тёрке, огурцы нарежьте соломкой."
+        },
+        {
+          "text": "Смешайте свёклу, щавель с его отваром, огурцы и зелень со сметаной и посолите."
+        },
+        {
+          "text": "Влейте холодный кефир и размешайте до ровного розового цвета."
+        },
+        {
+          "text": "Уберите в холодильник на час, чтобы суп настоялся и стал по-настоящему холодным."
+        },
+        {
+          "text": "Отварите картофель и подайте горячим отдельно, а в суп положите половинки яиц."
+        }
+      ],
+      "difficulty": "easy",
+      "isActive": true,
+      "shopabilityScore": 67
+    }
+  ]
+}
