@@ -11,6 +11,7 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Reflection;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Nabo.Recipes;
 using Npgsql;
 void Check(bool condition, string label) { if (!condition) throw new Exception(label); Console.WriteLine("PASS " + label); }
@@ -30,6 +31,7 @@ edited["recipe"]!["image"] = "javascript:alert(1)";
 Check(!Valid(), "unsafe image rejected");
 Check(!RecipeValidation.Valid("bad/slug", default), "malformed document rejected");
 Check(typeof(RecipeController).GetCustomAttribute<AuthorizeAttribute>() is not null, "admin endpoints require authentication");
+Check(typeof(RecipeController).GetMethod("Delete")!.GetCustomAttribute<HttpDeleteAttribute>()!.Template == "{slug}", "recipe deletion has a dedicated DELETE endpoint");
 Check(RemoteIdentity.Parse(JsonSerializer.SerializeToElement(new { phoneNumber = "+375295495775" })) is null, "phone alone cannot authorize");
 Check(RemoteIdentity.Parse(JsonSerializer.SerializeToElement(new { id = Guid.Empty })) is null, "empty identity rejected");
 var id = Guid.NewGuid();
@@ -76,6 +78,10 @@ if (database is not null)
     Check(JsonSerializer.Serialize(await store.Published(default)).Contains("\"test\":2"), "draft does not replace published version");
     await store.Initialize(null, default);
     Check(await store.Save("test-draft", JsonSerializer.SerializeToElement(new { test = 4 }), 3, false, default) == 4, "restart preserves edited data");
+    Check(!await store.Delete("test-draft", 3, default), "stale deletion does not remove updated recipe");
+    Check(await store.Delete("test-draft", 4, default), "delete current recipe");
+    await store.Initialize(null, default);
+    Check(!JsonSerializer.Serialize(await store.List(default)).Contains("test-draft"), "deleted recipe does not reappear after restart");
     Check(!await store.IsEditor(id, default), "ordinary user is not an editor");
     var apiBuilder = WebApplication.CreateBuilder();
     apiBuilder.WebHost.UseTestServer();
@@ -109,6 +115,11 @@ if (database is not null)
     Check((await editor.PutAsJsonAsync("/api/admin/recipes/api-test", new { document = apiDocument, revision = 2, publish = false })).IsSuccessStatusCode, "API updates draft independently");
     var publicCatalog = await guest.GetStringAsync("/api/recipe-catalog");
     Check(publicCatalog.Contains("Published API test") && !publicCatalog.Contains("Unpublished change"), "public API retains published version");
+    Check((int)(await guest.DeleteAsync("/api/admin/recipes/api-test?revision=3")).StatusCode == 401, "guest cannot delete recipes");
+    Check((int)(await editor.DeleteAsync("/api/admin/recipes/api-test?revision=0")).StatusCode == 400, "deletion requires current revision");
+    Check((int)(await editor.DeleteAsync("/api/admin/recipes/api-test?revision=2")).StatusCode == 409, "stale deletion conflicts");
+    Check((int)(await editor.DeleteAsync("/api/admin/recipes/api-test?revision=3")).StatusCode == 204, "editor deletes recipe");
+    Check(!(await guest.GetStringAsync("/api/recipe-catalog")).Contains("api-test"), "deleted recipe disappears from public catalog");
     await using (var revoke = source.CreateCommand("DELETE FROM nabo_recipes.recipe_editors WHERE user_id=@id"))
     {
         revoke.Parameters.AddWithValue("id", id); await revoke.ExecuteNonQueryAsync();

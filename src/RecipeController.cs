@@ -31,6 +31,18 @@ public class RecipeController(RecipeStore store) : ControllerBase
         var revision = await store.Save(slug, input.Document, input.Revision, input.Publish, ct);
         return revision is null ? Conflict(new { message = "Рецепт изменён в другой вкладке. Обновите список перед сохранением." }) : Ok(new { revision });
     }
+
+    [HttpDelete("{slug}")]
+    public async Task<IActionResult> Delete(string slug, [FromQuery] int revision, CancellationToken ct)
+    {
+        Response.Headers.CacheControl = "no-store";
+        if (!await IsEditor(ct)) return Forbid();
+        if (revision < 1 || !System.Text.RegularExpressions.Regex.IsMatch(slug, "^[a-z0-9]+(?:-[a-z0-9]+)*$") || slug.Length > 100)
+            return BadRequest(new { message = "Укажите адрес рецепта и его текущую версию." });
+        return await store.Delete(slug, revision, ct)
+            ? NoContent()
+            : Conflict(new { message = "Рецепт уже удалён или изменён в другой вкладке. Обновите список." });
+    }
 }
 [ApiController, Route("api/recipe-catalog")]
 public class CatalogController(RecipeStore store) : ControllerBase

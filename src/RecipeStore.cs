@@ -114,4 +114,12 @@ public class RecipeStore(NpgsqlDataSource database)
         var result = await cmd.ExecuteScalarAsync(ct);
         return result is null ? null : Convert.ToInt32(result);
     }
+    public async Task<bool> Delete(string slug, int revision, CancellationToken ct)
+    {
+        await using var cmd = database.CreateCommand("DELETE FROM nabo_recipes.managed_recipes WHERE slug=@slug AND revision=@revision");
+        cmd.Parameters.AddWithValue("slug", slug);
+        cmd.Parameters.AddWithValue("revision", revision);
+        return await cmd.ExecuteNonQueryAsync(ct) == 1;
+    }
+
 }
