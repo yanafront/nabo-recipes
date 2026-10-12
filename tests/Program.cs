@@ -15,6 +15,9 @@ using Microsoft.AspNetCore.Mvc;
 using Nabo.Recipes;
 using Npgsql;
 void Check(bool condition, string label) { if (!condition) throw new Exception(label); Console.WriteLine("PASS " + label); }
+Check(SeoController.Valid(new("evroopt", "123", "Молоко", "1 л", "https://example.com/photo.jpg")), "valid SEO product reference");
+Check(!SeoController.Valid(new("unknown", "123", "Молоко", null, null)), "reject unknown SEO store");
+Check(!SeoController.Valid(new("evroopt", "123", "Молоко", null, "javascript:alert(1)")), "reject unsafe SEO image");
 var seeds = RecipeStore.SeedDocuments().ToArray();
 Check(seeds.Length == 41, "preserve existing 41 recipes");
 foreach (var doc in seeds) Check(RecipeValidation.Valid(doc.GetProperty("recipe").GetProperty("slug").GetString()!, doc), "valid seed");
@@ -86,6 +89,8 @@ if (database is not null)
     var apiBuilder = WebApplication.CreateBuilder();
     apiBuilder.WebHost.UseTestServer();
     apiBuilder.Services.AddSingleton(store);
+    apiBuilder.Services.AddSingleton(source);
+    apiBuilder.Configuration["SEO_INGEST_KEY"]="isolated-test-key";
     apiBuilder.Services.AddSingleton<IHttpClientFactory>(new FakeClients(HttpStatusCode.OK, JsonSerializer.Serialize(new { id })));
     apiBuilder.Services.AddAuthentication("Nabo").AddScheme<AuthenticationSchemeOptions, NaboAuthentication>("Nabo", null);
     apiBuilder.Services.AddAuthorization();
@@ -102,6 +107,14 @@ if (database is not null)
     {
         grant.Parameters.AddWithValue("id", id); await grant.ExecuteNonQueryAsync();
     }
+    Check((int)(await guest.PostAsJsonAsync("/api/seo/products",new { items=new[]{new {storeId="evroopt",id="123",name="Молоко",unit="1 л",image=(string?)null}} })).StatusCode==401,"SEO ingestion requires a server key");
+    guest.DefaultRequestHeaders.Add("X-Nabo-Seo-Key","isolated-test-key");
+    Check((await guest.PostAsJsonAsync("/api/seo/products",new { items=new[]{new {storeId="evroopt",id="123",name="Молоко",unit="1 л",image=(string?)null}} })).IsSuccessStatusCode,"persist known product metadata");
+    Check((await guest.GetStringAsync("/api/seo/products?storeId=evroopt")).Contains("123"),"public product discovery page");
+    Check((await guest.GetAsync("/api/seo/manifest")).IsSuccessStatusCode,"sitemap manifest counts");
+    Check((await guest.GetAsync("/api/seo/recipes?limit=2")).IsSuccessStatusCode,"bounded sitemap recipe records");
+    Check((await guest.GetAsync("/api/recipe-catalog/page?limit=2")).IsSuccessStatusCode,"bounded public recipe page");
+    Check((int)(await guest.GetAsync("/api/recipe-catalog/missing-slug")).StatusCode==404,"unknown recipe has real 404");
     Check((await editor.GetAsync("/api/admin/recipes")).IsSuccessStatusCode, "editor reads catalog");
     Check((int)(await editor.PutAsJsonAsync("/api/admin/recipes/api-test", new { document = new { }, revision = 0, publish = false })).StatusCode == 400, "API validates malformed document");
     var apiDocument = JsonNode.Parse(seeds[0].GetRawText())!;

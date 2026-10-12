@@ -1,0 +1,29 @@
+name: Check recipes and SEO API
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: nabo_test
+          POSTGRES_PASSWORD: test_only
+          POSTGRES_DB: nabo_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U nabo_test"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - run: dotnet build src/Nabo.Recipes.csproj
+      - run: dotnet run --project tests/Nabo.Recipes.Checks.csproj
+        env:
+          TEST_DATABASE_URL: postgresql://nabo_test:test_only@localhost:5432/nabo_test

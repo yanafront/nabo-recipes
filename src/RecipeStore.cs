@@ -27,6 +27,11 @@ public class RecipeStore(NpgsqlDataSource database)
         await using var schema = new NpgsqlCommand("""
             SELECT pg_advisory_xact_lock(113355204, 1);
             CREATE SCHEMA IF NOT EXISTS nabo_recipes;
+            CREATE TABLE IF NOT EXISTS nabo_recipes.seo_products(
+              store_id varchar(30) NOT NULL,id varchar(200) NOT NULL,name varchar(500) NOT NULL,unit varchar(200) NOT NULL DEFAULT '',image text,
+              updated_at timestamptz NOT NULL DEFAULT now(),last_seen_at timestamptz NOT NULL DEFAULT now(),PRIMARY KEY(store_id,id));
+            CREATE INDEX IF NOT EXISTS seo_products_seen ON nabo_recipes.seo_products(last_seen_at);
+
             CREATE TABLE IF NOT EXISTS nabo_recipes.schema_versions(version integer PRIMARY KEY);
             CREATE TABLE IF NOT EXISTS nabo_recipes.recipe_editors(user_id uuid PRIMARY KEY, created_at timestamptz NOT NULL DEFAULT now());
             CREATE TABLE IF NOT EXISTS nabo_recipes.managed_recipes(
