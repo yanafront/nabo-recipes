@@ -105,7 +105,8 @@ public class RecipeStore(NpgsqlDataSource database)
         await using var reader = await cmd.ExecuteReaderAsync(ct);
         var records = new List<object>();
         while (await reader.ReadAsync(ct)) records.Add(new { slug = reader.GetString(0), document = JsonSerializer.Deserialize<JsonElement>(reader.GetString(1)), revision = reader.GetInt32(2), published = reader.GetBoolean(3) });
-        return new { records };
+        await reader.DisposeAsync();
+        return new { records, categories = await new CategoryStore(database).List(ct) };
     }
     public async Task<object> Published(CancellationToken ct)
     {
