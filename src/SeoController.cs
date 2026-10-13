@@ -96,7 +96,7 @@ public class PublicRecipesController(NpgsqlDataSource database) : ControllerBase
     public async Task<IActionResult> Page([FromQuery] string q="",[FromQuery] string category="",[FromQuery] string collection="",[FromQuery] int offset=0,[FromQuery] int limit=24,CancellationToken ct=default)
     {
         if(offset<0 || limit<1 || limit>100 || q.Length>120 || category.Length>40 || collection.Length>40) return BadRequest();
-        var pattern=category switch { "chicken"=>"куриц|курин|цыплен|индейк", "meat"=>"говяд|свинин|баранин|телят|бекон|ветчин|колбас|мясн|фарш", "fish"=>"рыб|лосос|семг|треск|тунец|тунц|форел|сельд|скумбр|сардин|анчоус|кревет|мидии|кальмар|морепродукт", _=>"a^" };
+        var pattern=category switch { "chicken"=>"куриц|курин|цыплен|индейк", "meat"=>"говяд|свинин|баранин|телят|бекон|ветчин|колбас|мясн|фарш", "fish"=>"рыб|лосос|семг|треск|тунец|тунц|форел|сельдь|сельди|сельдью|скумбр|сардин|анчоус|кревет|мидии|кальмар|морепродукт", _=>"a^" };
         const string filter="""
           published IS NOT NULL AND COALESCE((published->'recipe'->>'isActive')::boolean,false)
           AND (@category='' OR published->'recipe'->>'categoryId'=@category OR (published->'recipe'->'tags') ? @category

@@ -122,6 +122,10 @@ if (database is not null)
       Check(quick.RootElement.GetProperty("documents").EnumerateArray().All(d=>d.GetProperty("recipe").GetProperty("cookingTime").GetDouble()<=30),"quick collection preserves cooking time filter");
     }
     using(var family=JsonDocument.Parse(await guest.GetStringAsync("/api/recipe-catalog/page?collection=family&limit=100"))) Check(family.RootElement.GetProperty("documents").EnumerateArray().All(d=>d.GetProperty("recipe").GetProperty("servings").GetDouble()>=4),"family collection preserves serving filter");
+    using(var fish=JsonDocument.Parse(await guest.GetStringAsync("/api/recipe-catalog/page?category=fish&limit=100"))) {
+      Check(!fish.RootElement.GetProperty("documents").EnumerateArray().Any(d=>d.GetProperty("recipe").GetProperty("slug").GetString()=="erwtensoep"),"celery never classifies pea soup as fish");
+      Check(fish.RootElement.GetProperty("documents").EnumerateArray().Any(d=>d.GetProperty("recipe").GetProperty("slug").GetString()=="fish-and-chips"),"fish category still finds actual fish");
+    }
     Check((int)(await guest.GetAsync("/api/recipe-catalog/missing-slug")).StatusCode==404,"unknown recipe has real 404");
     Check((await editor.GetAsync("/api/admin/recipes")).IsSuccessStatusCode, "editor reads catalog");
     Check((int)(await editor.PutAsJsonAsync("/api/admin/recipes/api-test", new { document = new { }, revision = 0, publish = false })).StatusCode == 400, "API validates malformed document");
@@ -136,10 +140,19 @@ if (database is not null)
     Check((await editor.PutAsJsonAsync("/api/admin/recipes/api-test", new { document = apiDocument, revision = 2, publish = false })).IsSuccessStatusCode, "API updates draft independently");
     var publicCatalog = await guest.GetStringAsync("/api/recipe-catalog");
     Check(publicCatalog.Contains("Published API test") && !publicCatalog.Contains("Unpublished change"), "public API retains published version");
+    Check((int)(await guest.PatchAsJsonAsync("/api/admin/recipes/api-test/category",new { categoryId="soups",revision=3 })).StatusCode==401,"guest cannot change category");
+    Check((int)(await editor.PatchAsJsonAsync("/api/admin/recipes/api-test/category",new { categoryId="invalid",revision=3 })).StatusCode==400,"category validates known taxonomy");
+    Check((int)(await editor.PatchAsJsonAsync("/api/admin/recipes/api-test/category",new { categoryId="soups",revision=2 })).StatusCode==409,"category respects revision conflicts");
+    Check((await editor.PatchAsJsonAsync("/api/admin/recipes/api-test/category",new { categoryId="soups",revision=3 })).IsSuccessStatusCode,"editor changes category independently");
+    using(var changed=JsonDocument.Parse(await guest.GetStringAsync("/api/recipe-catalog/api-test"))) {
+      var r=changed.RootElement.GetProperty("recipe");
+      Check(r.GetProperty("categoryId").GetString()=="soups","category applied to public version");
+      Check(r.GetProperty("title").GetString()=="Published API test","category edit does not publish draft title");
+    }
     Check((int)(await guest.DeleteAsync("/api/admin/recipes/api-test?revision=3")).StatusCode == 401, "guest cannot delete recipes");
     Check((int)(await editor.DeleteAsync("/api/admin/recipes/api-test?revision=0")).StatusCode == 400, "deletion requires current revision");
     Check((int)(await editor.DeleteAsync("/api/admin/recipes/api-test?revision=2")).StatusCode == 409, "stale deletion conflicts");
-    Check((int)(await editor.DeleteAsync("/api/admin/recipes/api-test?revision=3")).StatusCode == 204, "editor deletes recipe");
+    Check((int)(await editor.DeleteAsync("/api/admin/recipes/api-test?revision=4")).StatusCode == 204, "editor deletes recipe");
     Check(!(await guest.GetStringAsync("/api/recipe-catalog")).Contains("api-test"), "deleted recipe disappears from public catalog");
     await using (var revoke = source.CreateCommand("DELETE FROM nabo_recipes.recipe_editors WHERE user_id=@id"))
     {

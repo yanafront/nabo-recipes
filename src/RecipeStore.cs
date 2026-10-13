@@ -121,6 +121,18 @@ public class RecipeStore(NpgsqlDataSource database)
         var result = await cmd.ExecuteScalarAsync(ct);
         return result is null ? null : Convert.ToInt32(result);
     }
+    public async Task<int?> SetCategory(string slug, string category, int revision, CancellationToken ct)
+    {
+        await using var cmd = database.CreateCommand("""
+            UPDATE nabo_recipes.managed_recipes SET
+            draft=jsonb_set(draft,'{recipe,categoryId}',to_jsonb(CAST(@category AS text))),
+            published=CASE WHEN published IS NULL THEN NULL ELSE jsonb_set(published,'{recipe,categoryId}',to_jsonb(CAST(@category AS text))) END,
+            revision=revision+1,updated_at=now() WHERE slug=@slug AND revision=@revision RETURNING revision
+            """);
+        cmd.Parameters.AddWithValue("slug",slug); cmd.Parameters.AddWithValue("category",category); cmd.Parameters.AddWithValue("revision",revision);
+        var result=await cmd.ExecuteScalarAsync(ct);
+        return result is null ? null : Convert.ToInt32(result);
+    }
     public async Task<bool> Delete(string slug, int revision, CancellationToken ct)
     {
         await using var cmd = database.CreateCommand("DELETE FROM nabo_recipes.managed_recipes WHERE slug=@slug AND revision=@revision");

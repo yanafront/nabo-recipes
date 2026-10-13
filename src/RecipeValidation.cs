@@ -4,6 +4,7 @@ namespace Nabo.Recipes;
 
 public static class RecipeValidation
 {
+    public static bool ValidCategory(string? category) => new[] { "breakfast", "soups", "mains", "salads", "pasta", "chicken", "meat", "fish", "sides", "baking", "desserts" }.Contains(category);
     static bool Text(JsonElement e, string key, int max, bool required = true) =>
         e.TryGetProperty(key, out var v) ? v.ValueKind == JsonValueKind.String && v.GetString()!.Length <= max && (!required || !string.IsNullOrWhiteSpace(v.GetString())) : !required;
     static bool Number(JsonElement e, string key, double min, double max) => e.TryGetProperty(key, out var v) && v.TryGetDouble(out var n) && double.IsFinite(n) && n >= min && n <= max;
@@ -15,8 +16,7 @@ public static class RecipeValidation
             var r = d.GetProperty("recipe"); var dictionary = d.GetProperty("ingredients");
             if (r.GetProperty("slug").GetString() != slug || !Text(r, "id", 160) || !Text(r, "title", 200) || !Number(r, "servings", 1, 30)) return false;
             if (!Text(r, "description", 5000, false) || !Text(r, "source", 200) || !Text(r, "sourceId", 200)) return false;
-            var categories = new[] { "breakfast", "soups", "mains", "salads", "pasta", "chicken", "meat", "fish", "sides", "baking", "desserts" };
-            if (!categories.Contains(r.GetProperty("categoryId").GetString())) return false;
+            if (!ValidCategory(r.GetProperty("categoryId").GetString())) return false;
             if (r.GetProperty("tags").GetArrayLength() > 30 || r.GetProperty("tags").EnumerateArray().Any(t => t.ValueKind != JsonValueKind.String || string.IsNullOrWhiteSpace(t.GetString()) || t.GetString()!.Length > 100)) return false;
             if (r.TryGetProperty("yieldGrams", out _) && !Number(r, "yieldGrams", 1, 100000)) return false;
             if (r.TryGetProperty("cookingTime", out _) && !Number(r, "cookingTime", 0, 10080)) return false;
