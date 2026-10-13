@@ -145,7 +145,7 @@ if (database is not null)
     Check((int)(await editor.PatchAsJsonAsync("/api/admin/recipes/api-test/category",new { categoryId="soups",revision=2 })).StatusCode==409,"category respects revision conflicts");
     Check((await editor.PatchAsJsonAsync("/api/admin/recipes/api-test/category",new { categoryId="soups",revision=3 })).IsSuccessStatusCode,"editor changes category independently");
     using(var changed=JsonDocument.Parse(await guest.GetStringAsync("/api/recipe-catalog/api-test"))) {
-      var r=changed.RootElement.GetProperty("recipe");
+      var r=changed.RootElement.GetProperty("document").GetProperty("recipe");
       Check(r.GetProperty("categoryId").GetString()=="soups","category applied to public version");
       Check(r.GetProperty("title").GetString()=="Published API test","category edit does not publish draft title");
     }
