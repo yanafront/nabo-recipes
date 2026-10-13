@@ -111,6 +111,9 @@ if (database is not null)
     guest.DefaultRequestHeaders.Add("X-Nabo-Seo-Key","isolated-test-key");
     Check((await guest.PostAsJsonAsync("/api/seo/products",new { items=new[]{new {storeId="evroopt",id="123",name="Молоко",unit="1 л",image=(string?)null}} })).IsSuccessStatusCode,"persist known product metadata");
     Check((await guest.GetStringAsync("/api/seo/products?storeId=evroopt")).Contains("123"),"public product discovery page");
+    await using(var expire=source.CreateCommand("UPDATE nabo_recipes.seo_products SET last_seen_at=now()-interval '31 days' WHERE store_id='evroopt' AND id='123'")) await expire.ExecuteNonQueryAsync();
+    using(var expired=JsonDocument.Parse(await guest.GetStringAsync("/api/seo/products?storeId=evroopt"))) Check(expired.RootElement.GetProperty("total").GetInt64()==0,"stale product excluded from sitemap discovery");
+    Check((await guest.GetStringAsync("/api/seo/products?storeId=evroopt&id=123")).Contains("123"),"known SKU metadata remains available for a fresh lookup");
     Check((await guest.GetAsync("/api/seo/manifest")).IsSuccessStatusCode,"sitemap manifest counts");
     Check((await guest.GetAsync("/api/seo/recipes?limit=2")).IsSuccessStatusCode,"bounded sitemap recipe records");
     Check((await guest.GetAsync("/api/recipe-catalog/page?limit=2")).IsSuccessStatusCode,"bounded public recipe page");

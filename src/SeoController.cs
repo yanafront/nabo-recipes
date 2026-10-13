@@ -70,7 +70,7 @@ public class SeoController(NpgsqlDataSource database, IConfiguration config) : C
     public async Task<IActionResult> Products([FromQuery] int offset=0,[FromQuery] int limit=2000,[FromQuery] string? storeId=null,[FromQuery] string? id=null,CancellationToken ct=default)
     {
         if(offset<0 || limit<1 || limit>2000 || storeId is not null && !Stores.Contains(storeId)) return BadRequest();
-        const string filter="last_seen_at > now()-interval '30 days' AND (@store='' OR store_id=@store) AND (@id='' OR id=@id)";
+        const string filter="(@id<>'' OR last_seen_at > now()-interval '30 days') AND (@store='' OR store_id=@store) AND (@id='' OR id=@id)";
         await using var count=database.CreateCommand("SELECT count(*) FROM nabo_recipes.seo_products WHERE "+filter);
         count.Parameters.AddWithValue("store",storeId??"");count.Parameters.AddWithValue("id",id??"");
         var total=Convert.ToInt64(await count.ExecuteScalarAsync(ct));
