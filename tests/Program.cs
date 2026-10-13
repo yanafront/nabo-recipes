@@ -18,6 +18,9 @@ void Check(bool condition, string label) { if (!condition) throw new Exception(l
 Check(SeoController.Valid(new("evroopt", "123", "Молоко", "1 л", "https://example.com/photo.jpg")), "valid SEO product reference");
 Check(!SeoController.Valid(new("unknown", "123", "Молоко", null, null)), "reject unknown SEO store");
 Check(!SeoController.Valid(new("evroopt", "123", "Молоко", null, "javascript:alert(1)")), "reject unsafe SEO image");
+Check(IngredientStore.Id("  Яйца ")==IngredientStore.Id("Яйцо для смазки"),"safe egg variants deduplicate");
+Check(IngredientStore.Id("Зелёный   лук")==IngredientStore.Id("зеленый лук"),"ingredient normalization ignores case spaces and yo");
+Check(IngredientStore.Id("Яйцо шоколадное")!=IngredientStore.Id("Яйца"),"different products never merge blindly");
 var seeds = RecipeStore.SeedDocuments().ToArray();
 Check(seeds.Length == 41, "preserve existing 41 recipes");
 foreach (var doc in seeds) Check(RecipeValidation.Valid(doc.GetProperty("recipe").GetProperty("slug").GetString()!, doc), "valid seed");
@@ -90,6 +93,7 @@ if (database is not null)
     apiBuilder.WebHost.UseTestServer();
     apiBuilder.Services.AddSingleton(store);
     apiBuilder.Services.AddSingleton<CategoryStore>();
+    apiBuilder.Services.AddSingleton<IngredientStore>();
     apiBuilder.Services.AddSingleton(source);
     apiBuilder.Configuration["SEO_INGEST_KEY"]="isolated-test-key";
     apiBuilder.Services.AddSingleton<IHttpClientFactory>(new FakeClients(HttpStatusCode.OK, JsonSerializer.Serialize(new { id })));
@@ -129,6 +133,31 @@ if (database is not null)
     }
     Check((int)(await guest.GetAsync("/api/recipe-catalog/missing-slug")).StatusCode==404,"unknown recipe has real 404");
     Check((await editor.GetAsync("/api/admin/recipes")).IsSuccessStatusCode, "editor reads catalog");
+    Check((int)(await guest.GetAsync("/api/admin/ingredients")).StatusCode==401,"ingredient registry is editor only");
+    var eggId=IngredientStore.Id("Яйцо");
+    using(var allIngredients=JsonDocument.Parse(await editor.GetStringAsync("/api/admin/ingredients"))) {
+        var items=allIngredients.RootElement.GetProperty("items").EnumerateArray().ToArray();
+        Check(items.Select(i=>i.GetProperty("id").GetString()).Distinct().Count()==items.Length,"migrated ingredients have no duplicate keys");
+        Check(items.Single(i=>i.GetProperty("id").GetString()==eggId).GetProperty("usageCount").GetInt32()>1,"ingredient references all matching recipes");
+    }
+    var syrnikiBefore=JsonNode.Parse(await guest.GetStringAsync("/api/recipe-catalog/syrniki"))!["document"]!;
+    var originalQuantity=syrnikiBefore["recipe"]!["ingredients"]!.AsArray().First(i=>IngredientStore.Key(i!["name"]!.GetValue<string>())=="яйцо")!["quantity"]!.ToJsonString();
+    Check((int)(await guest.PutAsJsonAsync("/api/admin/ingredients/"+eggId,new { searchQuery="Яйца куриные С1",revision=1 })).StatusCode==401,"guest cannot change global ingredient query");
+    Check((await editor.PutAsJsonAsync("/api/admin/ingredients/"+eggId,new { searchQuery="Яйца куриные С1",revision=1 })).IsSuccessStatusCode,"global query updates related recipes");
+    var syrnikiAfter=JsonNode.Parse(await guest.GetStringAsync("/api/recipe-catalog/syrniki"))!["document"]!;
+    var eggRow=syrnikiAfter["recipe"]!["ingredients"]!.AsArray().First(i=>IngredientStore.Key(i!["name"]!.GetValue<string>())=="яйцо")!;
+    Check(eggRow["searchQuery"]!.GetValue<string>()=="Яйца куриные С1","published recipe uses global query");
+    Check(eggRow["quantity"]!.ToJsonString()==originalQuantity,"global ingredient update preserves quantity");
+    Check(syrnikiAfter["recipe"]!["instructions"]!.ToJsonString()==syrnikiBefore["recipe"]!["instructions"]!.ToJsonString(),"global query preserves instructions");
+    Check((int)(await editor.PutAsJsonAsync("/api/admin/ingredients/"+eggId,new { searchQuery="Other",revision=1 })).StatusCode==409,"stale global query conflicts");
+    var sharedDocument=JsonNode.Parse(seeds[0].GetRawText())!;
+    sharedDocument["recipe"]!["slug"]="shared-test";
+    sharedDocument["recipe"]!["ingredients"]!.AsArray().Add(new JsonObject { ["name"]="Яйца",["ingredientId"]="shared-egg",["quantity"]=2,["unit"]="piece",["searchQuery"]="Старый локальный запрос" });
+    sharedDocument["ingredients"]!.AsArray().Add(new JsonObject { ["id"]="shared-egg",["name"]="Яйца",["searchTerms"]=new JsonArray("Старый локальный запрос"),["aliases"]=new JsonArray(),["pantry"]=false,["common"]=true });
+    Check((await editor.PutAsJsonAsync("/api/admin/recipes/shared-test",new {document=sharedDocument,revision=0,publish=true})).IsSuccessStatusCode,"new recipe accepts shared ingredient");
+    var sharedPublished=await guest.GetStringAsync("/api/recipe-catalog/shared-test");
+    Check(sharedPublished.Contains("Яйца куриные С1")&&!sharedPublished.Contains("Старый локальный запрос"),"later recipe save respects global override");
+
     Check((int)(await guest.PutAsJsonAsync("/api/admin/recipe-categories/snacks",new { title="Закуски",revision=0 })).StatusCode==401,"guest cannot create categories");
     Check((await editor.PutAsJsonAsync("/api/admin/recipe-categories/snacks",new { title="Закуски",revision=0 })).IsSuccessStatusCode,"editor creates category");
     Check((int)(await editor.PutAsJsonAsync("/api/admin/recipe-categories/snacks",new { title="Дубликат",revision=0 })).StatusCode==409,"duplicate category slug conflicts");

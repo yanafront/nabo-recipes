@@ -29,7 +29,7 @@ public class RecipeController(RecipeStore store) : ControllerBase
         if (input.Revision < 0 || input.Revision == int.MaxValue || !RecipeValidation.Valid(slug, input.Document) || !await store.HasCategory(input.Document.GetProperty("recipe").GetProperty("categoryId").GetString()!,ct))
             return BadRequest(new { message = "Проверьте название, ингредиенты, запросы поиска и данные рецепта." });
         var revision = await store.Save(slug, input.Document, input.Revision, input.Publish, ct);
-        return revision is null ? Conflict(new { message = "Рецепт изменён в другой вкладке. Обновите список перед сохранением." }) : Ok(new { revision });
+        return revision is null ? Conflict(new { message = "Рецепт изменён в другой вкладке. Обновите список перед сохранением." }) : Ok(new { revision, document=await store.Draft(slug,ct) });
     }
 
     public record CategoryRequest(string CategoryId, int Revision);

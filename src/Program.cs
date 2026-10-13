@@ -10,6 +10,7 @@ var database = builder.Configuration["DATABASE_URL"] ?? throw new InvalidOperati
 builder.Services.AddSingleton(NpgsqlDataSource.Create(DatabaseConnection.Parse(database)));
 builder.Services.AddSingleton<RecipeStore>();
 builder.Services.AddSingleton<CategoryStore>();
+builder.Services.AddSingleton<IngredientStore>();
 var authBase = builder.Configuration["AUTH_API_BASE_URL"] ?? "https://naboback-production.up.railway.app";
 if (!Uri.TryCreate(authBase.TrimEnd('/') + "/", UriKind.Absolute, out var authUri) || authUri.Scheme is not ("http" or "https"))
     throw new InvalidOperationException("Invalid AUTH_API_BASE_URL.");
