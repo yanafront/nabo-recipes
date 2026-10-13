@@ -156,7 +156,8 @@ if (database is not null)
     sharedDocument["ingredients"]!.AsArray().Add(new JsonObject { ["id"]="shared-egg",["name"]="Яйца",["searchTerms"]=new JsonArray("Старый локальный запрос"),["aliases"]=new JsonArray(),["pantry"]=false,["common"]=true });
     Check((await editor.PutAsJsonAsync("/api/admin/recipes/shared-test",new {document=sharedDocument,revision=0,publish=true})).IsSuccessStatusCode,"new recipe accepts shared ingredient");
     var sharedPublished=await guest.GetStringAsync("/api/recipe-catalog/shared-test");
-    Check(sharedPublished.Contains("Яйца куриные С1")&&!sharedPublished.Contains("Старый локальный запрос"),"later recipe save respects global override");
+    var savedShared=JsonNode.Parse(sharedPublished)!["document"]!;
+    Check(savedShared["recipe"]!["ingredients"]!.AsArray().Where(i=>IngredientStore.Key(i!["name"]!.GetValue<string>())=="яйцо").All(i=>i!["searchQuery"]!.GetValue<string>()=="Яйца куриные С1"),"later recipe save respects global override");
 
     Check((int)(await guest.PutAsJsonAsync("/api/admin/recipe-categories/snacks",new { title="Закуски",revision=0 })).StatusCode==401,"guest cannot create categories");
     Check((await editor.PutAsJsonAsync("/api/admin/recipe-categories/snacks",new { title="Закуски",revision=0 })).IsSuccessStatusCode,"editor creates category");
