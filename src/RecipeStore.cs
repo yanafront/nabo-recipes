@@ -37,6 +37,8 @@ public class RecipeStore(NpgsqlDataSource database)
             CREATE TABLE IF NOT EXISTS nabo_recipes.managed_recipes(
               slug varchar(100) PRIMARY KEY, draft jsonb NOT NULL, published jsonb,
               revision integer NOT NULL CHECK(revision>0), updated_at timestamptz NOT NULL DEFAULT now());
+            CREATE INDEX IF NOT EXISTS managed_recipes_public_slug ON nabo_recipes.managed_recipes(slug)
+              WHERE published IS NOT NULL AND COALESCE((published->'recipe'->>'isActive')::boolean,false);
             """, connection, transaction);
         await schema.ExecuteNonQueryAsync(ct);
         await using var version = new NpgsqlCommand("SELECT count(*) FROM nabo_recipes.schema_versions WHERE version=1", connection, transaction);

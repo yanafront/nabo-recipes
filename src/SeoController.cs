@@ -101,8 +101,20 @@ public class PublicRecipesController(NpgsqlDataSource database) : ControllerBase
           published IS NOT NULL AND COALESCE((published->'recipe'->>'isActive')::boolean,false)
           AND (@category='' OR published->'recipe'->>'categoryId'=@category OR (published->'recipe'->'tags') ? @category
             OR lower(COALESCE(published->'recipe'->>'title','') || (published->'recipe'->'ingredients')::text) ~ @pattern)
-          AND (@collection='' OR (published->'recipe'->'tags') ? @collection)
-          AND (@q='' OR lower(COALESCE(published->'recipe'->>'title','') || (published->'recipe'->'ingredients')::text) LIKE @search)
+          AND CASE @collection
+            WHEN 'quick20' THEN (published->'recipe'->>'cookingTime')::numeric<=20
+            WHEN 'quick30' THEN (published->'recipe'->>'cookingTime')::numeric<=30
+            WHEN 'family' THEN (published->'recipe'->>'servings')::numeric>=4
+            WHEN 'easy' THEN published->'recipe'->>'difficulty'='easy' OR (published->'recipe'->'tags') ? 'easy'
+            WHEN 'budget' THEN (published->'recipe'->'tags') ? 'budget'
+            WHEN 'protein' THEN (published->'recipe'->'nutrition'->>'protein')::numeric *
+              CASE published->'recipe'->'nutrition'->>'basis' WHEN 'serving' THEN 1 WHEN 'recipe' THEN 1/NULLIF((published->'recipe'->>'servings')::numeric,0)
+              WHEN '100g' THEN (published->'recipe'->>'yieldGrams')::numeric/100/NULLIF((published->'recipe'->>'servings')::numeric,0) END >=25
+            WHEN 'light' THEN (published->'recipe'->'nutrition'->>'calories')::numeric *
+              CASE published->'recipe'->'nutrition'->>'basis' WHEN 'serving' THEN 1 WHEN 'recipe' THEN 1/NULLIF((published->'recipe'->>'servings')::numeric,0)
+              WHEN '100g' THEN (published->'recipe'->>'yieldGrams')::numeric/100/NULLIF((published->'recipe'->>'servings')::numeric,0) END <=500
+            ELSE true END
+          AND (@q='' OR lower(COALESCE(published->'recipe'->>'title','') || COALESCE(published->'recipe'->>'description','') || (published->'recipe'->'ingredients')::text || (published->'ingredients')::text) LIKE @search)
           """;
         void Params(NpgsqlCommand cmd) { cmd.Parameters.AddWithValue("category",category);cmd.Parameters.AddWithValue("collection",collection);cmd.Parameters.AddWithValue("q",q);cmd.Parameters.AddWithValue("search","%"+q.ToLowerInvariant()+"%");cmd.Parameters.AddWithValue("pattern",pattern); }
         await using var count=database.CreateCommand("SELECT count(*) FROM nabo_recipes.managed_recipes WHERE "+filter);Params(count);

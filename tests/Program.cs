@@ -117,6 +117,11 @@ if (database is not null)
     Check((await guest.GetAsync("/api/seo/manifest")).IsSuccessStatusCode,"sitemap manifest counts");
     Check((await guest.GetAsync("/api/seo/recipes?limit=2")).IsSuccessStatusCode,"bounded sitemap recipe records");
     Check((await guest.GetAsync("/api/recipe-catalog/page?limit=2")).IsSuccessStatusCode,"bounded public recipe page");
+    using(var quick=JsonDocument.Parse(await guest.GetStringAsync("/api/recipe-catalog/page?collection=quick30&limit=100"))) {
+      Check(quick.RootElement.GetProperty("documents").GetArrayLength()>0,"quick collection does not depend on stored tags");
+      Check(quick.RootElement.GetProperty("documents").EnumerateArray().All(d=>d.GetProperty("recipe").GetProperty("cookingTime").GetDouble()<=30),"quick collection preserves cooking time filter");
+    }
+    using(var family=JsonDocument.Parse(await guest.GetStringAsync("/api/recipe-catalog/page?collection=family&limit=100"))) Check(family.RootElement.GetProperty("documents").EnumerateArray().All(d=>d.GetProperty("recipe").GetProperty("servings").GetDouble()>=4),"family collection preserves serving filter");
     Check((int)(await guest.GetAsync("/api/recipe-catalog/missing-slug")).StatusCode==404,"unknown recipe has real 404");
     Check((await editor.GetAsync("/api/admin/recipes")).IsSuccessStatusCode, "editor reads catalog");
     Check((int)(await editor.PutAsJsonAsync("/api/admin/recipes/api-test", new { document = new { }, revision = 0, publish = false })).StatusCode == 400, "API validates malformed document");
