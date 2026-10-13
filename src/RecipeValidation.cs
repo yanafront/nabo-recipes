@@ -4,7 +4,7 @@ namespace Nabo.Recipes;
 
 public static class RecipeValidation
 {
-    public static bool ValidCategory(string? category) => new[] { "breakfast", "soups", "mains", "salads", "pasta", "chicken", "meat", "fish", "sides", "baking", "desserts" }.Contains(category);
+    public static bool ValidCategory(string? category) => CategoryStore.ValidId(category);
     static bool Text(JsonElement e, string key, int max, bool required = true) =>
         e.TryGetProperty(key, out var v) ? v.ValueKind == JsonValueKind.String && v.GetString()!.Length <= max && (!required || !string.IsNullOrWhiteSpace(v.GetString())) : !required;
     static bool Number(JsonElement e, string key, double min, double max) => e.TryGetProperty(key, out var v) && v.TryGetDouble(out var n) && double.IsFinite(n) && n >= min && n <= max;

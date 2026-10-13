@@ -26,7 +26,7 @@ public class RecipeController(RecipeStore store) : ControllerBase
     {
         Response.Headers.CacheControl = "no-store";
         if (!await IsEditor(ct)) return Forbid();
-        if (input.Revision < 0 || input.Revision == int.MaxValue || !RecipeValidation.Valid(slug, input.Document))
+        if (input.Revision < 0 || input.Revision == int.MaxValue || !RecipeValidation.Valid(slug, input.Document) || !await store.HasCategory(input.Document.GetProperty("recipe").GetProperty("categoryId").GetString()!,ct))
             return BadRequest(new { message = "Проверьте название, ингредиенты, запросы поиска и данные рецепта." });
         var revision = await store.Save(slug, input.Document, input.Revision, input.Publish, ct);
         return revision is null ? Conflict(new { message = "Рецепт изменён в другой вкладке. Обновите список перед сохранением." }) : Ok(new { revision });
@@ -38,7 +38,7 @@ public class RecipeController(RecipeStore store) : ControllerBase
     {
         Response.Headers.CacheControl = "no-store";
         if (!await IsEditor(ct)) return Forbid();
-        if (input.Revision < 1 || input.Revision == int.MaxValue || !RecipeValidation.ValidCategory(input.CategoryId) ||
+        if (input.Revision < 1 || input.Revision == int.MaxValue || !RecipeValidation.ValidCategory(input.CategoryId) || !await store.HasCategory(input.CategoryId,ct) ||
             !System.Text.RegularExpressions.Regex.IsMatch(slug,"^[a-z0-9]+(?:-[a-z0-9]+)*$") || slug.Length > 100)
             return BadRequest(new { message = "Укажите существующую категорию и текущую версию рецепта." });
         var revision = await store.SetCategory(slug,input.CategoryId,input.Revision,ct);

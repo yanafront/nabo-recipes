@@ -9,6 +9,7 @@ builder.WebHost.ConfigureKestrel(o => o.Limits.MaxRequestBodySize = 262144);
 var database = builder.Configuration["DATABASE_URL"] ?? throw new InvalidOperationException("Set DATABASE_URL.");
 builder.Services.AddSingleton(NpgsqlDataSource.Create(DatabaseConnection.Parse(database)));
 builder.Services.AddSingleton<RecipeStore>();
+builder.Services.AddSingleton<CategoryStore>();
 var authBase = builder.Configuration["AUTH_API_BASE_URL"] ?? "https://naboback-production.up.railway.app";
 if (!Uri.TryCreate(authBase.TrimEnd('/') + "/", UriKind.Absolute, out var authUri) || authUri.Scheme is not ("http" or "https"))
     throw new InvalidOperationException("Invalid AUTH_API_BASE_URL.");

@@ -89,6 +89,7 @@ if (database is not null)
     var apiBuilder = WebApplication.CreateBuilder();
     apiBuilder.WebHost.UseTestServer();
     apiBuilder.Services.AddSingleton(store);
+    apiBuilder.Services.AddSingleton<CategoryStore>();
     apiBuilder.Services.AddSingleton(source);
     apiBuilder.Configuration["SEO_INGEST_KEY"]="isolated-test-key";
     apiBuilder.Services.AddSingleton<IHttpClientFactory>(new FakeClients(HttpStatusCode.OK, JsonSerializer.Serialize(new { id })));
@@ -128,6 +129,23 @@ if (database is not null)
     }
     Check((int)(await guest.GetAsync("/api/recipe-catalog/missing-slug")).StatusCode==404,"unknown recipe has real 404");
     Check((await editor.GetAsync("/api/admin/recipes")).IsSuccessStatusCode, "editor reads catalog");
+    Check((int)(await guest.PutAsJsonAsync("/api/admin/recipe-categories/snacks",new { title="Закуски",revision=0 })).StatusCode==401,"guest cannot create categories");
+    Check((await editor.PutAsJsonAsync("/api/admin/recipe-categories/snacks",new { title="Закуски",revision=0 })).IsSuccessStatusCode,"editor creates category");
+    Check((int)(await editor.PutAsJsonAsync("/api/admin/recipe-categories/snacks",new { title="Дубликат",revision=0 })).StatusCode==409,"duplicate category slug conflicts");
+    Check((int)(await editor.PutAsJsonAsync("/api/admin/recipe-categories/duplicate",new { title="Закуски",revision=0 })).StatusCode==409,"duplicate category title conflicts");
+    Check((await editor.PutAsJsonAsync("/api/admin/recipe-categories/snacks",new { title="Закуски и снеки",revision=1 })).IsSuccessStatusCode,"rename preserves category slug");
+    Check((await guest.GetStringAsync("/api/recipe-categories")).Contains("snacks"),"public dynamic taxonomy includes new category");
+    var customDocument=JsonNode.Parse(seeds[0].GetRawText())!;
+    customDocument["recipe"]!["slug"]="taxonomy-test";customDocument["recipe"]!["categoryId"]="snacks";
+    Check((await editor.PutAsJsonAsync("/api/admin/recipes/taxonomy-test",new { document=customDocument,revision=0,publish=false })).IsSuccessStatusCode,"recipe accepts new category");
+    Check((int)(await editor.DeleteAsync("/api/admin/recipe-categories/snacks?revision=2")).StatusCode==409,"category used by draft cannot be deleted");
+    Check((await editor.PutAsJsonAsync("/api/admin/recipes/taxonomy-test",new { document=customDocument,revision=1,publish=true })).IsSuccessStatusCode,"recipe publishes in new category");
+    Check((int)(await editor.DeleteAsync("/api/admin/recipe-categories/snacks?revision=2")).StatusCode==409,"category used by published recipe cannot be deleted");
+    Check((await editor.PatchAsJsonAsync("/api/admin/recipes/taxonomy-test/category",new { categoryId="soups",revision=2 })).IsSuccessStatusCode,"move recipe to another category");
+    Check((int)(await editor.DeleteAsync("/api/admin/recipe-categories/snacks?revision=1")).StatusCode==409,"stale category deletion conflicts");
+    Check((int)(await editor.DeleteAsync("/api/admin/recipe-categories/snacks?revision=2")).StatusCode==204,"unused category deletion succeeds");
+    Check((int)(await editor.PatchAsJsonAsync("/api/admin/recipes/taxonomy-test/category",new { categoryId="snacks",revision=3 })).StatusCode==400,"removed category cannot be assigned");
+
     Check((int)(await editor.PutAsJsonAsync("/api/admin/recipes/api-test", new { document = new { }, revision = 0, publish = false })).StatusCode == 400, "API validates malformed document");
     var apiDocument = JsonNode.Parse(seeds[0].GetRawText())!;
     apiDocument["recipe"]!["slug"] = "api-test";
