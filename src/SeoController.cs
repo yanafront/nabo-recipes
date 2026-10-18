@@ -104,7 +104,7 @@ public class PublicRecipesController(NpgsqlDataSource database) : ControllerBase
           AND CASE @collection
             WHEN 'quick20' THEN (published->'recipe'->>'cookingTime')::numeric<=20
             WHEN 'quick30' THEN (published->'recipe'->>'cookingTime')::numeric<=30
-            WHEN 'family' THEN (published->'recipe'->>'servings')::numeric>=4
+            WHEN 'family' THEN (published->'recipe'->'tags') ? 'family'
             WHEN 'easy' THEN published->'recipe'->>'difficulty'='easy' OR (published->'recipe'->'tags') ? 'easy'
             WHEN 'budget' THEN (published->'recipe'->'tags') ? 'budget'
             WHEN 'protein' THEN (published->'recipe'->'nutrition'->>'protein')::numeric *

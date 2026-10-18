@@ -1,7 +1,8 @@
 # Recipe classification table
 
 The frontend `/admin/recipe-classification` lists every recipe with checkbox columns.
-A recipe has one `categoryId` and multiple collection tags. Category definitions are
+A recipe has one `categoryId`. The table edits the editorial `family` and `budget` flags.
+Time, nutrition and difficulty collections continue to follow recipe data automatically. Category definitions are
 still managed through `/admin/categories`.
 
 `PATCH /api/admin/recipes/{slug}/classification` requires an editor token and the

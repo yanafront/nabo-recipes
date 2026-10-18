@@ -232,6 +232,8 @@ if (database is not null)
       Check(r.GetProperty("categoryId").GetString()=="soups","classification applies explicitly chosen public category");
       Check(r.GetProperty("tags").EnumerateArray().Select(t=>t.GetString()).SequenceEqual(new[]{"custom-public","easy","light"}),"only requested public flag changes are applied");
     }
+    using(var familyPage=JsonDocument.Parse(await guest.GetStringAsync("/api/recipe-catalog/page?collection=family&q=Published%20classification%20title")))
+      Check(familyPage.RootElement.GetProperty("documents").GetArrayLength()==0,"unchecking family removes the dish from the collection regardless of servings");
     Check((await editor.DeleteAsync("/api/admin/recipes/classification-test?revision=4")).IsSuccessStatusCode,"classification fixture removed");
     Check((int)(await guest.DeleteAsync("/api/admin/recipes/api-test?revision=3")).StatusCode == 401, "guest cannot delete recipes");
     Check((int)(await editor.DeleteAsync("/api/admin/recipes/api-test?revision=0")).StatusCode == 400, "deletion requires current revision");
