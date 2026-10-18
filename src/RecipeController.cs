@@ -44,6 +44,20 @@ public class RecipeController(RecipeStore store) : ControllerBase
         var revision = await store.SetCategory(slug,input.CategoryId,input.Revision,ct);
         return revision is null ? Conflict(new { message = "Рецепт изменён. Обновите список." }) : Ok(new { revision });
     }
+    public record ClassificationRequest(string? CategoryId, int Revision, RecipeCollectionChanges? Collections);
+    [HttpPatch("{slug}/classification")]
+    public async Task<IActionResult> Classification(string slug, ClassificationRequest input, CancellationToken ct)
+    {
+        Response.Headers.CacheControl = "no-store";
+        if (!await IsEditor(ct)) return Forbid();
+        if (input.Revision < 1 || input.Revision == int.MaxValue || !RecipeClassification.ValidCollections(input.Collections) ||
+            input.CategoryId is null && (input.Collections is null || input.Collections.Add.Length+input.Collections.Remove.Length==0) ||
+            input.CategoryId is not null && (!RecipeValidation.ValidCategory(input.CategoryId) || !await store.HasCategory(input.CategoryId,ct)) ||
+            !System.Text.RegularExpressions.Regex.IsMatch(slug,"^[a-z0-9]+(?:-[a-z0-9]+)*$") || slug.Length > 100)
+            return BadRequest(new { message = "Укажите существующую категорию, подборки и текущую версию рецепта." });
+        var revision=await store.SetCategory(slug,input.CategoryId,input.Revision,ct,input.Collections);
+        return revision is null ? Conflict(new { message = "Рецепт изменён или превышен лимит тегов. Обновите версию." }) : Ok(new { revision });
+    }
     [HttpDelete("{slug}")]
     public async Task<IActionResult> Delete(string slug, [FromQuery] int revision, CancellationToken ct)
     {

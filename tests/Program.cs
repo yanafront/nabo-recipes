@@ -21,6 +21,10 @@ Check(!SeoController.Valid(new("evroopt", "123", "Молоко", null, "javascri
 Check(IngredientStore.Id("  Яйца ")==IngredientStore.Id("Яйцо для смазки"),"safe egg variants deduplicate");
 Check(IngredientStore.Id("Зелёный   лук")==IngredientStore.Id("зеленый лук"),"ingredient normalization ignores case spaces and yo");
 Check(IngredientStore.Id("Яйцо шоколадное")!=IngredientStore.Id("Яйца"),"different products never merge blindly");
+Check(RecipeClassification.ValidCollections(new(["family"],["easy"])),"classification accepts supported flags");
+Check(!RecipeClassification.ValidCollections(new(["family"],["family"])),"classification rejects overlapping additions and removals");
+Check(!RecipeClassification.ValidCollections(new(["unknown"],[])),"classification rejects unknown flags");
+Check(!RecipeClassification.ValidCollections(new(null!,[])),"classification rejects null flag lists");
 var seeds = RecipeStore.SeedDocuments().ToArray();
 Check(seeds.Length == 41, "preserve existing 41 recipes");
 foreach (var doc in seeds) Check(RecipeValidation.Valid(doc.GetProperty("recipe").GetProperty("slug").GetString()!, doc), "valid seed");
@@ -108,6 +112,7 @@ if (database is not null)
     using var editor = api.GetTestClient();
     editor.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "fake-valid-session");
     Check((int)(await editor.GetAsync("/api/admin/recipes")).StatusCode == 403, "ordinary user cannot read drafts");
+    Check((int)(await editor.PatchAsJsonAsync("/api/admin/recipes/unknown/classification",new { categoryId="soups",revision=1 })).StatusCode==403,"ordinary user cannot classify recipes");
     await using (var grant = source.CreateCommand("INSERT INTO nabo_recipes.recipe_editors(user_id) VALUES(@id)"))
     {
         grant.Parameters.AddWithValue("id", id); await grant.ExecuteNonQueryAsync();
@@ -197,6 +202,37 @@ if (database is not null)
       Check(r.GetProperty("categoryId").GetString()=="soups","category applied to public version");
       Check(r.GetProperty("title").GetString()=="Published API test","category edit does not publish draft title");
     }
+    var classificationDoc=JsonNode.Parse(seeds[0].GetRawText())!;
+    classificationDoc["recipe"]!["slug"]="classification-test";
+    classificationDoc["recipe"]!["title"]="Published classification title";
+    classificationDoc["recipe"]!["tags"]=new JsonArray("custom-public","easy");
+    var publicCategory=classificationDoc["recipe"]!["categoryId"]!.GetValue<string>();
+    Check((await editor.PutAsJsonAsync("/api/admin/recipes/classification-test",new { document=classificationDoc,revision=0,publish=true })).IsSuccessStatusCode,"classification creates public fixture");
+    classificationDoc["recipe"]!["title"]="Unpublished classification title";
+    classificationDoc["recipe"]!["categoryId"]="salads";
+    classificationDoc["recipe"]!["tags"]=new JsonArray("custom-draft","quick20");
+    Check((await editor.PutAsJsonAsync("/api/admin/recipes/classification-test",new { document=classificationDoc,revision=1,publish=false })).IsSuccessStatusCode,"classification keeps a distinct draft");
+    var addFamily=new { revision=2,collections=new { add=new[]{"family"},remove=Array.Empty<string>() } };
+    Check((int)(await guest.PatchAsJsonAsync("/api/admin/recipes/classification-test/classification",addFamily)).StatusCode==401,"guest cannot classify recipes");
+    Check((int)(await editor.PatchAsJsonAsync("/api/admin/recipes/classification-test/classification",new { revision=2 })).StatusCode==400,"empty classification is rejected");
+    Check((int)(await editor.PatchAsJsonAsync("/api/admin/recipes/classification-test/classification",new { revision=2,collections=new {add=new[]{"unknown"},remove=Array.Empty<string>()} })).StatusCode==400,"unknown collection is rejected through API");
+    Check((await editor.PatchAsJsonAsync("/api/admin/recipes/classification-test/classification",addFamily)).IsSuccessStatusCode,"collection-only patch succeeds");
+    Check((int)(await editor.PatchAsJsonAsync("/api/admin/recipes/classification-test/classification",addFamily)).StatusCode==409,"stale classification patch conflicts");
+    using(var result=JsonDocument.Parse(await guest.GetStringAsync("/api/recipe-catalog/classification-test"))) {
+      var r=result.RootElement.GetProperty("document").GetProperty("recipe");
+      Check(r.GetProperty("categoryId").GetString()==publicCategory,"collection edit never publishes draft category");
+      Check(r.GetProperty("title").GetString()=="Published classification title","collection edit never publishes draft text");
+      Check(r.GetProperty("tags").EnumerateArray().Select(t=>t.GetString()).SequenceEqual(new[]{"custom-public","easy","family"}),"published tags preserve unrelated published flags");
+    }
+    var classificationDraft=(await store.Draft("classification-test",default)).GetProperty("recipe");
+    Check(classificationDraft.GetProperty("tags").EnumerateArray().Select(t=>t.GetString()).SequenceEqual(new[]{"custom-draft","quick20","family"}),"draft tags preserve unrelated draft flags");
+    Check((await editor.PatchAsJsonAsync("/api/admin/recipes/classification-test/classification",new { revision=3,categoryId="soups",collections=new { add=new[]{"light"},remove=new[]{"family"} } })).IsSuccessStatusCode,"category and individual flags save atomically");
+    using(var result=JsonDocument.Parse(await guest.GetStringAsync("/api/recipe-catalog/classification-test"))) {
+      var r=result.RootElement.GetProperty("document").GetProperty("recipe");
+      Check(r.GetProperty("categoryId").GetString()=="soups","classification applies explicitly chosen public category");
+      Check(r.GetProperty("tags").EnumerateArray().Select(t=>t.GetString()).SequenceEqual(new[]{"custom-public","easy","light"}),"only requested public flag changes are applied");
+    }
+    Check((await editor.DeleteAsync("/api/admin/recipes/classification-test?revision=4")).IsSuccessStatusCode,"classification fixture removed");
     Check((int)(await guest.DeleteAsync("/api/admin/recipes/api-test?revision=3")).StatusCode == 401, "guest cannot delete recipes");
     Check((int)(await editor.DeleteAsync("/api/admin/recipes/api-test?revision=0")).StatusCode == 400, "deletion requires current revision");
     Check((int)(await editor.DeleteAsync("/api/admin/recipes/api-test?revision=2")).StatusCode == 409, "stale deletion conflicts");

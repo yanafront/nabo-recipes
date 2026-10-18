@@ -158,18 +158,36 @@ public class RecipeStore(NpgsqlDataSource database)
         await tx.CommitAsync(ct);
         return result is null ? null : Convert.ToInt32(result);
     }
-    public async Task<int?> SetCategory(string slug, string category, int revision, CancellationToken ct)
+    // Update each document independently: unrelated draft/public fields and tags stay intact.
+    static string ClassificationSql(string column) => $$"""
+        jsonb_set(
+            CASE WHEN @category IS NULL THEN {{column}} ELSE jsonb_set({{column}},'{recipe,categoryId}',to_jsonb(CAST(@category AS text))) END,
+            '{recipe,tags}', CASE WHEN NOT @updateCollections THEN {{column}}#>'{recipe,tags}'
+            ELSE COALESCE((SELECT jsonb_agg(value ORDER BY ord)
+                FROM jsonb_array_elements_text({{column}}#>'{recipe,tags}') WITH ORDINALITY AS tags(value,ord)
+                WHERE NOT(value=ANY(@removed)) AND NOT(value=ANY(@added))),'[]'::jsonb) || @addJson END)
+        """;
+    public async Task<int?> SetCategory(string slug, string? category, int revision, CancellationToken ct, RecipeCollectionChanges? collections = null)
     {
+        if (!RecipeClassification.ValidCollections(collections)) throw new ArgumentException("Invalid recipe collections", nameof(collections));
         await using var connection=await database.OpenConnectionAsync(ct);await using var tx=await connection.BeginTransactionAsync(ct);
         await using(var gate=new NpgsqlCommand("SELECT pg_advisory_xact_lock(113355204,2)",connection,tx)) await gate.ExecuteNonQueryAsync(ct);
-        await using var cmd = new NpgsqlCommand("""
+        await using var cmd = new NpgsqlCommand($$"""
             UPDATE nabo_recipes.managed_recipes SET
-            draft=jsonb_set(draft,'{recipe,categoryId}',to_jsonb(CAST(@category AS text))),
-            published=CASE WHEN published IS NULL THEN NULL ELSE jsonb_set(published,'{recipe,categoryId}',to_jsonb(CAST(@category AS text))) END,
+            draft={{ClassificationSql("draft")}},
+            published=CASE WHEN published IS NULL THEN NULL ELSE {{ClassificationSql("published")}} END,
             revision=revision+1,updated_at=now() WHERE slug=@slug AND revision=@revision
-            AND EXISTS(SELECT 1 FROM nabo_recipes.recipe_categories WHERE id=@category) RETURNING revision
+            AND (@category IS NULL OR EXISTS(SELECT 1 FROM nabo_recipes.recipe_categories WHERE id=@category))
+            AND jsonb_array_length(({{ClassificationSql("draft")}})#>'{recipe,tags}')<=30
+            AND (published IS NULL OR jsonb_array_length(({{ClassificationSql("published")}})#>'{recipe,tags}')<=30)
+            RETURNING revision
             """,connection,tx);
-        cmd.Parameters.AddWithValue("slug",slug); cmd.Parameters.AddWithValue("category",category); cmd.Parameters.AddWithValue("revision",revision);
+        cmd.Parameters.AddWithValue("slug",slug); cmd.Parameters.AddWithValue("revision",revision);
+        cmd.Parameters.Add("category",NpgsqlTypes.NpgsqlDbType.Text).Value=(object?)category ?? DBNull.Value;
+        cmd.Parameters.AddWithValue("updateCollections",collections is not null);
+        cmd.Parameters.AddWithValue("added",collections?.Add ?? Array.Empty<string>());
+        cmd.Parameters.AddWithValue("removed",collections?.Remove ?? Array.Empty<string>());
+        cmd.Parameters.Add("addJson",NpgsqlTypes.NpgsqlDbType.Jsonb).Value=JsonSerializer.Serialize(collections?.Add ?? Array.Empty<string>());
         var result=await cmd.ExecuteScalarAsync(ct);await tx.CommitAsync(ct);
         return result is null ? null : Convert.ToInt32(result);
     }
