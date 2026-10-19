@@ -67,15 +67,15 @@ public class SeoController(NpgsqlDataSource database, IConfiguration config) : C
         Response.Headers.CacheControl="public,max-age=60";return Ok(new { items });
     }
     [HttpGet("products")]
-    public async Task<IActionResult> Products([FromQuery] int offset=0,[FromQuery] int limit=2000,[FromQuery] string? storeId=null,[FromQuery] string? id=null,CancellationToken ct=default)
+    public async Task<IActionResult> Products([FromQuery] int offset=0,[FromQuery] int limit=2000,[FromQuery] string? storeId=null,[FromQuery] string? id=null,[FromQuery] string q="",CancellationToken ct=default)
     {
-        if(offset<0 || limit<1 || limit>2000 || storeId is not null && !Stores.Contains(storeId)) return BadRequest();
-        const string filter="(@id<>'' OR last_seen_at > now()-interval '30 days') AND (@store='' OR store_id=@store) AND (@id='' OR id=@id)";
+        if(q.Length>80 || offset<0 || limit<1 || limit>2000 || storeId is not null && !Stores.Contains(storeId)) return BadRequest();
+        const string filter="(@id<>'' OR last_seen_at > now()-interval '30 days') AND (@store='' OR store_id=@store) AND (@id='' OR id=@id) AND (@q='' OR starts_with(lower(name),lower(@q)))";
         await using var count=database.CreateCommand("SELECT count(*) FROM nabo_recipes.seo_products WHERE "+filter);
-        count.Parameters.AddWithValue("store",storeId??"");count.Parameters.AddWithValue("id",id??"");
+        count.Parameters.AddWithValue("q",q.Trim());count.Parameters.AddWithValue("store",storeId??"");count.Parameters.AddWithValue("id",id??"");
         var total=Convert.ToInt64(await count.ExecuteScalarAsync(ct));
         await using var cmd=database.CreateCommand("SELECT store_id,id,name,unit,image,updated_at FROM nabo_recipes.seo_products WHERE "+filter+" ORDER BY store_id,id OFFSET @offset LIMIT @limit");
-        cmd.Parameters.AddWithValue("store",storeId??"");cmd.Parameters.AddWithValue("id",id??"");cmd.Parameters.AddWithValue("offset",offset);cmd.Parameters.AddWithValue("limit",limit);
+        cmd.Parameters.AddWithValue("q",q.Trim());cmd.Parameters.AddWithValue("store",storeId??"");cmd.Parameters.AddWithValue("id",id??"");cmd.Parameters.AddWithValue("offset",offset);cmd.Parameters.AddWithValue("limit",limit);
         await using var r=await cmd.ExecuteReaderAsync(ct);var items=new List<object>();
         while(await r.ReadAsync(ct)) items.Add(new { storeId=r.GetString(0),id=r.GetString(1),name=r.GetString(2),unit=r.GetString(3),image=r.IsDBNull(4)?null:r.GetString(4),updatedAt=r.GetDateTime(5).ToUniversalTime() });
         Response.Headers.CacheControl="public,max-age=60";return Ok(new { total,items });
